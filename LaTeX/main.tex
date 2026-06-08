@@ -1,0 +1,375 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+
+\geometry{
+  top=2.5cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=2.5cm
+}
+
+% Header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{CTJ 2026-1 EMB5476}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Hyperref setup
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=black
+}
+
+% Checkbox command
+\newcommand{\checkbox}{$\square$}
+
+\begin{document}
+
+% Title block
+\begin{center}
+  {\large\bfseries CTJ 2026-1 \quad EMB5476}\\[0.5em]
+  {\large\bfseries Trabalho 1 -- Tutoriais GT1, GT2 e GT3}\\[0.3em]
+  {\normalsize Entrega limite até as 22 horas do dia 15/06/26}\\[0.2em]
+  {\normalsize Grupos de até 4 alunos}
+\end{center}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+% ─────────────────────────────────────────────
+\section{Objetivos}
+
+Este trabalho tem como objetivos:
+
+\begin{enumerate}
+  \item Comparar diferentes abordagens de modelagem do escoamento (laminar, RANS e modelos de transição).
+  \item Avaliar o impacto do tratamento de parede (\textit{wall-function} vs.\ \textit{wall-resolved}) na qualidade dos resultados.
+  \item Executar e interpretar rotinas de pós-processamento nativas dos casos (\texttt{gnuplot}, \texttt{foamPostProcess}, amostragens).
+  \item Desenvolver pelo menos um pós-processamento próprio (script em Python/Matlab/gnuplot/bash).
+  \item Sustentar tecnicamente as escolhas de malha, condições de contorno (BCs) e modelo com base em teoria e em métricas (perfil de velocidade, $C_f$, $y^+$, etc.).
+\end{enumerate}
+
+% ─────────────────────────────────────────────
+\section{Casos e Escopo}
+
+\subsection*{GT1 -- Escoamento em duto (laminar e turbulento)}
+
+Diretórios recomendados:
+\begin{itemize}
+  \item \texttt{GT1/laminar}
+  \item \texttt{GT1/turbulent\_wedge} (ou \texttt{turbulent\_planar}, justificar escolha)
+\end{itemize}
+
+\subsection*{GT2 -- Placa plana (laminar, turbulento e variações de modelos)}
+
+Diretórios recomendados (escolher um conjunto representativo):
+\begin{itemize}
+  \item \texttt{GT2/RANS/KEpsilon\_highRE\_V1}
+  \item \texttt{GT2/RANS/KOmegaSST\_highRE}
+  \item \texttt{GT2/RANS/SA\_LRN} (ou outro low-Re)
+  \item \texttt{GT2/SRS/DES\_KO\_LRN} (comparação SRS)
+  \item \texttt{GT2/SRS/LES-WALE\_LRN} (comparação SRS)
+\end{itemize}
+
+\textbf{Observação:} é obrigatório comparar pelo menos um caso high-Re (com \textit{wall functions}) e um low-Re/\textit{wall-resolved}. Também é obrigatório realizar uma comparação específica entre as abordagens 2D \texttt{DES\_KO\_LRN} e \texttt{LES-WALE\_LRN}, discutindo limitações físicas dessa aproximação em 2D.
+
+\subsection*{GT3 -- Placa plana com transição (ERCOFTAC T3A)}
+
+Diretórios recomendados:
+\begin{itemize}
+  \item \texttt{GT3/RANS-kklo}
+  \item \texttt{GT3/RANS-kOmegaSSTLM\_UzG} (ou \texttt{RANS-kOmegaSSTLM})
+  \item \texttt{GT3/setup\_TM/...} para \textit{benchmark} com modelos totalmente turbulentos
+\end{itemize}
+
+% ─────────────────────────────────────────────
+\section{Procedimento Mínimo Obrigatório}
+
+\subsection{Etapa A -- Inspeção inicial do caso}
+
+Para cada caso executado:
+
+\begin{enumerate}[label=\alph*)]
+  \item Ler \texttt{README*} e scripts \texttt{run\_all.sh}, \texttt{run\_mesh.sh}, \texttt{run\_solver.sh}.
+  \item Identificar no relatório:
+  \begin{itemize}
+    \item solver utilizado (\texttt{foamRun}/\texttt{incompressibleFluid});
+    \item sequência de execução real;
+    \item se há execução serial ou paralela;
+    \item campos turbulentos adicionais requeridos ($k$, $\omega$, $\epsilon$, $\nu_t$, etc.).
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Etapa B -- Execução}
+
+Executar por caso, no mínimo:
+
+\begin{enumerate}[label=\alph*)]
+  \item \textbf{Malha:} \texttt{sh run\_mesh.sh} e validação via \texttt{log.checkMesh}.
+  \item \textbf{Solução:} \texttt{sh run\_solver.sh} (ou \texttt{sh run\_all.sh} quando incluir pós-processamento).
+  \item \textbf{Pós-processamento:} executar scripts do caso (\texttt{run\_gnuplot.sh}, etc.) e comandos \texttt{foamPostProcess} relevantes.
+\end{enumerate}
+
+\subsection{Etapa C -- Variação de configuração (estudo)}
+
+Obrigatório realizar alterações controladas (uma por vez), por exemplo:
+\begin{itemize}
+  \item troca de modelo em \texttt{constant/momentumTransport};
+  \item troca de tratamento de parede em \texttt{0/nut}, \texttt{0/k}, \texttt{0/omega}, \texttt{0/epsilon};
+  \item ajuste de intensidade de turbulência de entrada e/ou razão $\mu_t/\mu$;
+  \item refinamento local de malha perto da parede (quando aplicável).
+\end{itemize}
+
+Cada alteração deve ser acompanhada por uma explicação.
+
+% ─────────────────────────────────────────────
+\section{Análises Técnicas Esperadas}
+
+\subsection{GT1 -- Duto}
+
+\begin{itemize}
+  \item Comparar perfil de velocidade laminar numérico com perfil analítico de Poiseuille.
+  \item Comparar perfil turbulento com lei de potência/\textit{log-law} (comentar limitações).
+  \item Calcular/avaliar $y^+$ e tensão cisalhante na parede (\texttt{wallShearStress}).
+  \item Discutir efeito da escolha de \textit{wedge} vs.\ \textit{planar} (custo e fidelidade).
+\end{itemize}
+
+\subsection{GT2 -- Placa plana}
+
+\begin{itemize}
+  \item Construir gráfico $u^+$ vs.\ $y^+$ para ao menos 2 modelos.
+  \item Calcular coeficiente de atrito local:
+  \begin{equation}
+    C_f = \frac{\tau_w}{\tfrac{1}{2}\,\rho\,U_\infty^2}
+  \end{equation}
+  e comparar tendência com correlações/clássico da placa plana.
+  \item Comparar resposta high-Re (\textit{wall functions}) vs.\ low-Re (\textit{wall-resolved}).
+  \item Comparar explicitamente os casos \texttt{GT2/SRS/DES\_KO\_LRN} e \texttt{GT2/SRS/LES-WALE\_LRN} com base em $u^+$-$y^+$, $C_f(x)$, $y^+$, custo computacional e estabilidade numérica.
+  \item Comentar criticamente as limitações de usar DES e LES em 2D (conforme notas dos próprios casos) e o impacto disso na interpretação dos resultados.
+  \item Relacionar qualidade de resultados com faixa de $y^+$ observada.
+\end{itemize}
+
+\subsection{GT3 -- Transição (T3A)}
+
+\begin{itemize}
+  \item Comparar pelo menos um modelo de transição (ex.: $k$-$k_L$-$\omega$ ou SST-LM) contra um modelo totalmente turbulento.
+  \item Identificar ponto aproximado de transição (via $C_f(x)$, crescimento de $\nu_t$, ou mudança do perfil).
+  \item Discutir sensibilidade a condições de entrada ($\mathrm{TU}$, escalas turbulentas).
+  \item Explicar porque modelos de transição tendem a exigir abordagem \textit{wall-resolved}.
+\end{itemize}
+
+% ─────────────────────────────────────────────
+\section{Pós-processamento Próprio (obrigatório)}
+
+Cada grupo deve criar ao menos um script próprio (\texttt{.py}, \texttt{.ipynb}, \texttt{.m}, ou \texttt{.sh}) para automatizar uma análise. Exemplos:
+\begin{itemize}
+  \item cálculo automático de $u^+$ e $y^+$ a partir de amostras;
+  \item comparação de $C_f(x)$ entre 3 modelos;
+  \item extração de métricas de convergência de \texttt{log.solver}.
+\end{itemize}
+
+O script deve ser entregue com:
+\begin{itemize}
+  \item instruções de execução;
+  \item entradas esperadas;
+  \item saídas geradas (figuras/tabela).
+\end{itemize}
+
+% ─────────────────────────────────────────────
+\section{Estrutura Obrigatória do Relatório}
+
+\begin{enumerate}
+  \item \textbf{Introdução} (contexto: turbulência, fechamento, parede, transição).
+  \item \textbf{Metodologia} (casos, malhas, BCs, modelos, comandos usados).
+  \item \textbf{Resultados} (figuras comparativas, tabelas, métricas).
+  \item \textbf{Discussão} (causa física das diferenças; não apenas ``funcionou/não funcionou'').
+  \item \textbf{Conclusões} (o que aprenderam sobre modelo vs.\ malha vs.\ parede).
+  \item \textbf{Anexo} com scripts e comandos.
+\end{enumerate}
+
+% ─────────────────────────────────────────────
+\section{Checklist de Qualidade Mínima}
+
+\begin{itemize}[label=\checkbox]
+  \item Mostrar evidências de \texttt{checkMesh} e convergência/resíduos.
+  \item Reportar faixa de $y^+$ nos casos turbulentos.
+  \item Comparar pelo menos 3 configurações de turbulência no total (somando GT1+GT2+GT3).
+  \item Incluir no GT2 a comparação \texttt{DES\_KO\_LRN} vs.\ \texttt{LES-WALE\_LRN} com discussão das limitações de SRS em 2D.
+  \item Incluir ao menos 1 comparação com referência analítica/correlação/benchmark.
+  \item Incluir script próprio de pós-processamento.
+  \item Discutir custo computacional (tempo, iterações, paralelo vs.\ serial quando aplicável).
+\end{itemize}
+
+% ─────────────────────────────────────────────
+\section{Critérios de Avaliação}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{10cm} r}
+  \toprule
+  \textbf{Item} & \textbf{Peso} \\
+  \midrule
+  Fundamentação física (turbulência, parede, transição)          & 25\% \\
+  Qualidade técnica das simulações (setup, consistência, validação) & 25\% \\
+  Análise crítica comparativa (não apenas descritiva)             & 25\% \\
+  Pós-processamento próprio e reprodutibilidade                   & 15\% \\
+  Organização, clareza e qualidade das figuras/tabelas            & 10\% \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+% ─────────────────────────────────────────────
+\section{Referências Recomendadas}
+
+\begin{itemize}
+  \item Material de apoio do curso: \textit{Turbulence modeling in OpenFOAM: Guided Tutorials} (seção avançada, 2025).
+  \item NASA Turbulence Modeling Resource: \url{https://turbmodels.larc.nasa.gov/}
+  \item ERCOFTAC T3A (caso transicional): links fornecidos no material.
+\end{itemize}
+
+\vspace{1em}
+\noindent\textbf{Observação final:} a ênfase deste trabalho é demonstrar entendimento, não apenas executar scripts. Resultados ``bons'' sem explicação física consistente terão nota limitada.
+
+\newpage
+
+
+\section{Introdução}
+
+
+\section{Casos}
+
+    \begin{enumerate}
+    
+        \item GT1
+
+            \begin{itemize}
+                
+                \item Laminar -  listar (Fazer em tabela unificada?)
+
+                     \begin{itemize}
+                        \item solver utilizado (\texttt{foamRun}/\texttt{incompressibleFluid});
+                        \item sequência de execução real;
+                        \item se há execução serial ou paralela;
+                        \item campos turbulentos adicionais requeridos ($k$, $\omega$, $\epsilon$, $\nu_t$, etc.).
+                      \end{itemize}
+
+                        Estudo de caso - alterar um por vez = 
+
+                    \begin{itemize}
+                      \item troca de modelo em \texttt{constant/momentumTransport};
+                      \item troca de tratamento de parede em \texttt{0/nut}, \texttt{0/k}, \texttt{0/omega}, \texttt{0/epsilon};
+                      \item ajuste de intensidade de turbulência de entrada e/ou razão $\mu_t/\mu$;
+                      \item refinamento local de malha perto da parede (quando aplicável).
+                    \end{itemize}
+                    
+                \item Turbulento - GT1/turbulent wedge | GT1/turbulent\_planar - Justificar escolha
+
+                     \begin{itemize}
+                        \item solver utilizado (\texttt{foamRun}/\texttt{incompressibleFluid});
+                        \item sequência de execução real;
+                        \item se há execução serial ou paralela;
+                        \item campos turbulentos adicionais requeridos ($k$, $\omega$, $\epsilon$, $\nu_t$, etc.).
+                      \end{itemize}
+
+                        Estudo de caso - alterar um por vez = 
+
+                    \begin{itemize}
+                      \item troca de modelo em \texttt{constant/momentumTransport};
+                      \item troca de tratamento de parede em \texttt{0/nut}, \texttt{0/k}, \texttt{0/omega}, \texttt{0/epsilon};
+                      \item ajuste de intensidade de turbulência de entrada e/ou razão $\mu_t/\mu$;
+                      \item refinamento local de malha perto da parede (quando aplicável).
+                    \end{itemize}
+                
+            \end{itemize}
+
+            \begin{enumerate}
+                
+                \item Comparar perfil de velocidade laminar numérico com perfil analítico de Poiseuille. 
+
+                \item Comparar perfil turbulento com lei de potência/log-law (comentar limitações).
+
+                \item Calcular/avaliar y+ e tensão cisalhante na parede (wallShearStress).
+
+                \item Discutir efeito da escolha de wedge vs. planar (custo e fidelidade).
+                
+            \end{enumerate}
+
+        \item GT2 
+
+            \begin{itemize}
+                
+                \item Turbulento High Re
+
+                \item Turbulento Low Re
+
+                \item comparação entre DES KO LRN e LES-WALE LRN, discutindo limitações fisicas dessa aproximaçãoo em 2D.
+                
+            \end{itemize}
+
+            \begin{enumerate}
+                
+                \item Construir grafico $u^+$ vs. $y^+$ para ao menos 2 modelos.
+
+                \item Calcular coeficiente de atrito local e comparar tendência com correlações/clássico da placa plana.
+                
+                    \begin{equation}
+                        C_f = \frac{\tau_w}{\tfrac{1}{2} \rho U_\infty^2}
+                        \label{eq:placeholder_label}
+                    \end{equation}
+
+                \item Comparar resposta high-Re (wall functions) vs. low-Re (wall-resolved)
+
+                \item  Comparar explicitamente os casos GT2/SRS/DES KO LRN e GT2/SRS/LES-WALE LRN com base em mu+-y+, Cf (x), y+, custo computacional e estabilidade numérica
+
+                \item Comentar criticamente as limitações de usar DES e LES em 2D ( conforme notas dos próprios casos) e o impacto disso na interpretação dos resultados.
+
+                \item Relacionar qualidade de resultados com faixa de y+ observada.
+
+            \end{enumerate}
+
+        \item GT3
+
+            \begin{itemize}
+                
+                \item GT3/RANS-kklo
+
+                \item GT3/RANS-kOmegaSSTLM
+
+                \item GT3/setup TM/... para benchmark com modelos totalmente turbulentos
+                
+            \end{itemize}
+
+            \begin{enumerate}
+
+                \item Comparar pelo menos um modelo de transição (ex.: k-kl-$\omega$ ou SST-LM) contra um modelo totalmente turbulento.
+
+                \item Identificar ponto aproximado de transição (via Cf (x), crescimento de $\nu_t$, ou mudan\c{c}a do perfil).
+
+                \item Discutir sensibilidade a condições de entrada (TU, escalas turbulentas)
+
+                \item Explicar porque modelos de transição tendem a exigir abordagem wall-resolved.
+                
+            \end{enumerate}
+    
+    \end{enumerate}
+
+\end{document}
