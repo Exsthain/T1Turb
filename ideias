@@ -1,0 +1,8 @@
+0.lamm
+0.ksst
+0.ke
+test
+script em bash que pega todos os arquivos de dentro e monta a simulação 
+mv pra cima e troca em outras pastas também pra n ter que escrever
+
+python que gera imagem do paraview - função padrão existente (Camera)
