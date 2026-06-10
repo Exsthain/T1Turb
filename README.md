@@ -6,4 +6,3 @@ Alterações nos casos:
 
     GT1 - turbulent_wedge - a fazer
  
-                
