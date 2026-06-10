@@ -22,17 +22,17 @@
 
         Utilização: 
             
-            Na pasta GT1/turbulent_planar, rodar o script "run_turbulent_planar.sh", que todos os casos e salva o tempo de execução em um log.
+            Na pasta GT1/turbulent_planar, rodar o script "run_turbulent_planar.sh", que todos os casos e salva o tempo de execução em um log - ou em GT1 rodar run_timer_GT1.sh
 
 
     A FAZER P/ OUTROS CASOS:
-    
+
     ##GT2 - Calcular cf(x), u+, y+, custo computacional e estabilidade numerica dos casos
 
     Fazer ajuste de intensidade turbulenta?
     Fazer ajuste de malhas(nasa grid 1/2)?
 
-    - Modelos de turbulência com BC certas
+    - Modelos de turbulência com BC certas - se não estiver algum, ler README.FIRST para entender e escrever no relatório pq não foi simulado.
 
     KEpsilon_highRE_v1
         KEpsilon using wall functions
