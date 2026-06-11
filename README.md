@@ -29,6 +29,10 @@
 
     ##GT2 - Calcular cf(x), u+, y+, custo computacional e estabilidade numerica dos casos
 
+
+        Adicionado nova malha
+            caso 1 - fazer no blockMesh (n fiz ainda)
+            outros casos com grid nasa - mudar system/generateMeshDict para suportar mais elementos de malha
     Fazer ajuste de intensidade turbulenta?
     Fazer ajuste de malhas(nasa grid 1/2)?
 

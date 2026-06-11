@@ -1,2 +1,0 @@
-yes momentum predictor
-nutUWallFunction
