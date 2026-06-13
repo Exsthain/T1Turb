@@ -1,0 +1,2 @@
+Sat Jun 13 17:47:35 2026 by stein in stein-800g5m800g5w :Application: pyFoamPlotRunner.py --hardcopy --format-of-hardcopy=png --logname=log.solver true  | with cwd /home/stein/OpenFOAM/stein-12/run/T1Turb/GT1/laminar  |  Starting 
+Sat Jun 13 17:47:35 2026 by stein in stein-800g5m800g5w :Application: pyFoamPlotRunner.py --hardcopy --format-of-hardcopy=png --logname=log.solver true  | with cwd /home/stein/OpenFOAM/stein-12/run/T1Turb/GT1/laminar  |  Ending 

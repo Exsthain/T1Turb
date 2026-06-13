@@ -12,3 +12,5 @@ time -p sh run_solver.sh > /dev/null 2>> log.timer
 
 echo "run_sampling.sh" >> log.timer
 time -p sh run_sampling.sh > /dev/null 2>> log.timer
+
+timeout -s INT 10s pyFoamPlotWatcher.py --hardcopy --format-of-hardcopy=png log.solver

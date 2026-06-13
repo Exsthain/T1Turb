@@ -1,5 +1,8 @@
 #!/bin/bash
 
+find . -type f -name "*.png" -delete
+foamCleanTutorials
+
 > log.timer
 
 cd RANS
@@ -7,7 +10,7 @@ cd KEpsilon_highRE_V1_g1
 sh run_timer.sh
 cd ..
 
-cd KEpsilon_highRE_v1_g2
+cd KEpsilon_highRE_V1_g2
 sh run_timer.sh
 cd ..
 
