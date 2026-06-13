@@ -1,0 +1,176 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-0b487fc98b88
+Exec   : foamRun
+Date   : Jun 13 2026
+Time   : 16:43:09
+Host   : "stein-800g5m800g5w"
+PID    : 110918
+I/O    : uncollated
+Case   : /home/stein/OpenFOAM/stein-12/run/T1Turb/GT2/RANS/no_TM_g2
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting solver incompressibleFluid
+Selecting viscosity model Newtonian
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+No MRF models present
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-06
+        U: tolerance 1e-06
+
+
+SIMPLE: Operating solver in steady-state mode with 1 outer corrector
+SIMPLE: Operating solver in SIMPLE mode
+
+
+
+Starting time loop
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of p = 0 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 1 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_scalar write:
+    max() of p = 0 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 1.118034, max = 1.118034, average = 1.118034
+
+Time = 1s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 4.4081318e-17, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 1, Final residual = 8.7402832e-17, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 0.0097616356, No Iterations 394
+DICPCG:  Solving for p, Initial residual = 7.9771318e-06, Final residual = 7.6726285e-08, No Iterations 95
+DICPCG:  Solving for p, Initial residual = 7.6726893e-08, Final residual = 9.9395141e-09, No Iterations 64
+time step continuity errors : sum local = 5.205009e-12, global = -2.8622561e-13, cumulative = -2.8622561e-13
+ExecutionTime = 1.891359 s  ClockTime = 1 s
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of p = 5.5457721e-08 at location (1.9946302 0.98498031 0.5) in cell 208895
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 0.2608244 at location (1.7261398 2.5e-07 0.5) in cell 518
+
+volFieldValue maxdomain_scalar write:
+    max() of p = 0.00057620901 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1.0000892 at location (-0.31774688 0.00518958 0.5) in cell 114785
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 0.57099081, max = 0.57105302, average = 0.57101552
+
+Time = 2s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.099051319, Final residual = 8.7592379e-10, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.41198403, Final residual = 8.9354774e-09, No Iterations 9
+DICPCG:  Solving for p, Initial residual = 0.0091868644, Final residual = 9.1729616e-05, No Iterations 339
+DICPCG:  Solving for p, Initial residual = 0.00015375525, Final residual = 1.5343125e-06, No Iterations 181
+DICPCG:  Solving for p, Initial residual = 1.5344536e-06, Final residual = 1.2560857e-08, No Iterations 340
+time step continuity errors : sum local = 3.9586646e-12, global = -2.356759e-14, cumulative = -3.097932e-13
+ExecutionTime = 3.727984 s  ClockTime = 3 s
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of p = 3.0214155e-08 at location (1.9946302 0.98498031 0.5) in cell 208895
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 0.13041776 at location (-0.31774688 2.5e-07 0.5) in cell 1
+
+volFieldValue maxdomain_scalar write:
+    max() of p = 0.00044718316 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1.0001386 at location (-0.31774688 0.0056868279 0.5) in cell 116417
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 0.40376007, max = 0.40390417, average = 0.40379289
+
+Time = 3s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.040618876, Final residual = 7.3237832e-10, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.20822255, Final residual = 6.377218e-09, No Iterations 8
+DICPCG:  Solving for p, Initial residual = 0.016398471, Final residual = 0.00016077184, No Iterations 324
+DICPCG:  Solving for p, Initial residual = 0.00020002893, Final residual = 1.986281e-06, No Iterations 339
+DICPCG:  Solving for p, Initial residual = 1.9873683e-06, Final residual = 1.9538748e-08, No Iterations 297
+time step continuity errors : sum local = 5.0069026e-12, global = 2.678122e-13, cumulative = -4.1980996e-14
+ExecutionTime = 5.793973 s  ClockTime = 5 s
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of p = 2.213676e-08 at location (1.9946302 0.98498031 0.5) in cell 208895
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 0.092522665 at location (-0.31774688 2.5e-07 0.5) in cell 1
+
+volFieldValue maxdomain_scalar write:
+    max() of p = 0.00042779392 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1.0001599 at location (-0.31774688 0.0060445223 0.5) in cell 117505
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 0.34007842, max = 0.34028192, average = 0.34011342
+
+Time = 4s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.025893549, Final residual = 6.5639641e-10, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.14944273, Final residual = 4.7581026e-09, No Iterations 8
+DICPCG:  Solving for p, Initial residual = 0.021025897, Final residual = 0.00020794593, No Iterations 273
+DICPCG:  Solving for p, Initial residual = 0.00023124426, Final residual = 2.2149442e-06, No Iterations 314

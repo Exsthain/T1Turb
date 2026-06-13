@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |				
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12                                  	
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+pointSync false;
+
+patches
+(
+    // 1. Convert front and back planes to empty for 2D simulation
+    {
+        name            front;
+        patchInfo       { type empty; }
+        constructFrom   patches;
+        patches         (auto1);
+    }
+    {
+        name            back;
+        patchInfo       { type empty; }
+        constructFrom   patches;
+        patches         (auto2);
+    }
+
+    // 2. Map Inlet and Outlet (ny-1 = 384 faces)
+    {
+        name            inlet;
+        patchInfo       { type patch; }
+        constructFrom   patches;
+        patches         (auto3);
+    }
+    {
+        name            outlet;
+        patchInfo       { type patch; }
+        constructFrom   patches;
+        patches         (auto4);
+    }
+
+    // 3. Map Top boundary (nx-1 = 544 faces)
+    {
+        name            top;
+        patchInfo       { type wall; }
+        constructFrom   patches;
+        patches         (auto5);
+    }
+
+    // 4. Map Bottom boundary and extract the slipsurface set from it
+    {
+        name            slipsurface;
+        patchInfo       { type patch; }
+        constructFrom   set;
+        set             slipwall;
+    }
+    {
+        name            bottom;
+        patchInfo       { type wall; }
+        constructFrom   patches;
+        patches         (auto0);
+    }
+);
+
+// ************************************************************************* //
+
+

@@ -7,7 +7,7 @@ run_timer.sh
 cd ..
 
 cd turbulent_planar
-run_timer.sh
+run_turbulent_planar.sh
 cd ..
 
 cd turbulent_wedge

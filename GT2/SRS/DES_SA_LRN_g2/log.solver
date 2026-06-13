@@ -1,0 +1,179 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-0b487fc98b88
+Exec   : foamRun
+Date   : Jun 13 2026
+Time   : 16:54:14
+Host   : "stein-800g5m800g5w"
+PID    : 157556
+I/O    : uncollated
+Case   : /home/stein/OpenFOAM/stein-12/run/T1Turb/GT2/SRS/DES_SA_LRN_g2
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting solver incompressibleFluid
+Selecting viscosity model Newtonian
+Selecting turbulence model type LES
+Selecting LES turbulence model SpalartAllmarasIDDES
+Selecting LES delta type IDDESDelta
+--> FOAM Warning : 
+    From function void Foam::LESModels::maxDeltaxyz::calcDelta()
+    in file LES/LESdeltas/maxDeltaxyz/maxDeltaxyz.C at line 78
+    Case is 2D, LES is not strictly applicable
+
+Selecting patchDistMethod meshWave
+--> FOAM Warning : 
+    From function const Foam::volVectorField& Foam::wallDist::n() const
+    in file fvMesh/wallDist/wallDist/wallDist.C at line 177
+    n requested but 'nRequired' not specified in the wallDist dictionary
+    Recalculating y and n fields.
+--> FOAM Warning : 
+    From function void Foam::LESModels::IDDESDelta::calcDelta()
+    in file LES/LESdeltas/IDDESDelta/IDDESDelta.C at line 99
+    Case is 2D, LES is not strictly applicable
+
+LES
+{
+    LESModel        SpalartAllmarasIDDES;
+    turbulence      on;
+    printCoeffs     on;
+    delta           IDDESDelta;
+    cubeRootVolCoeffs
+    {
+        deltaCoeff      1;
+    }
+    Ck              0.094;
+    Ce              1.048;
+    sigmaNut        0.66666;
+    kappa           0.41;
+    Cb1             0.1355;
+    Cb2             0.622;
+    Cw2             0.3;
+    Cw3             2;
+    Cv1             7.1;
+    Cs              0.3;
+    CDES            0.65;
+    ck              0.07;
+}
+
+No MRF models present
+
+Courant Number mean: 0.023314319 max: 0.1
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: Operating solver in transient mode with 1 outer corrector
+PIMPLE: Operating solver in PISO mode
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+wallShearStress wallShearStress1:
+    processing all wall patches
+
+
+Starting time loop
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of p = 0 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    min() of nuTilda = 2e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    min() of nut = 1.4728506e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 1 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_scalar write:
+    max() of p = 0 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    max() of nuTilda = 2e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    max() of nut = 1.4728506e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 57.622392, max = 57.622392, average = 57.622392
+
+Courant Number mean: 0.023314319 max: 0.1
+deltaT = 0.0001199904
+Time = 0.00011999s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 1.3786813e-09, No Iterations 1
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.34713568, Final residual = 3.6645621e-12, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 0.009251885, No Iterations 435
+DICPCG:  Solving for p, Initial residual = 1.4519984e-05, Final residual = 9.9185346e-07, No Iterations 50
+time step continuity errors : sum local = 2.6420955e-14, global = 2.9919509e-16
+DICPCG:  Solving for p, Initial residual = 0.0029650528, Final residual = 2.9147232e-05, No Iterations 367
+DICPCG:  Solving for p, Initial residual = 2.6188551e-05, Final residual = 9.7226651e-07, No Iterations 84
+time step continuity errors : sum local = 2.6019376e-14, global = -1.0542833e-15, cumulative = -1.0542833e-15
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 1, Final residual = 1.8286019e-14, No Iterations 3
+ExecutionTime = 2.492551 s  ClockTime = 3 s
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of p = 3.6314408e-05 at location (1.9946302 0.98498031 0.5) in cell 208895
+    min() of nuTilda = 2.2187292e-07 at location (1.9946302 2.5e-07 0.5) in cell 543
+    min() of nut = 8.4313806e-10 at location (1.9946302 2.5e-07 0.5) in cell 543
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 0.39612176 at location (1.9946302 2.5e-07 0.5) in cell 543
+
+volFieldValue maxdomain_scalar write:
+    max() of p = 0.040137068 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    max() of nuTilda = 2e-06 at location (-0.32808102 0.50352127 0.5) in cell 196384
+    max() of nut = 1.4728506e-06 at location (-0.32808102 0.50352127 0.5) in cell 196384
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1.0000394 at location (-0.31774688 0.0009121833 0.5) in cell 83777
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 0.032986124, max = 0.033010119, average = 0.032986284
+
+Courant Number mean: 0.027974959 max: 0.11999062
+deltaT = 0.0001439712
+Time = 0.000263962s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0032168439, Final residual = 5.5142004e-11, No Iterations 1
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.35671165, Final residual = 2.0753054e-10, No Iterations 1
+DICPCG:  Solving for p, Initial residual = 0.0075574492, Final residual = 7.3740133e-05, No Iterations 387
+DICPCG:  Solving for p, Initial residual = 0.00037669077, Final residual = 3.6404702e-06, No Iterations 123
+time step continuity errors : sum local = 1.6781763e-14, global = 5.1944621e-16

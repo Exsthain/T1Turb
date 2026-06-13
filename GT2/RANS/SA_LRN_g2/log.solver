@@ -1,0 +1,140 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-0b487fc98b88
+Exec   : foamRun
+Date   : Jun 13 2026
+Time   : 16:43:59
+Host   : "stein-800g5m800g5w"
+PID    : 115828
+I/O    : uncollated
+Case   : /home/stein/OpenFOAM/stein-12/run/T1Turb/GT2/RANS/SA_LRN_g2
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting solver incompressibleFluid
+Selecting viscosity model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model SpalartAllmaras
+RAS
+{
+    RASModel        SpalartAllmaras;
+    turbulence      on;
+    printCoeffs     on;
+    sigmaNut        0.66666;
+    kappa           0.41;
+    Cb1             0.1355;
+    Cb2             0.622;
+    Cw2             0.3;
+    Cw3             2;
+    Cv1             7.1;
+    Cs              0.3;
+}
+
+No MRF models present
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-06
+        U: tolerance 1e-06
+        "(nuTilda)": tolerance 1e-06
+
+
+SIMPLE: Operating solver in steady-state mode with 1 outer corrector
+SIMPLE: Operating solver in SIMPLE mode
+
+
+
+Starting time loop
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+    - selecting all cells
+    - selected 208896 cell(s) with volume 2.33333
+
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of nuTilda = 2e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    min() of nut = 1.4728506e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 1 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_scalar write:
+    max() of nuTilda = 2e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+    max() of nut = 1.4728506e-06 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1 at location (-0.32808102 2.5e-07 0.5) in cell 0
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 1.1181371, max = 1.1181371, average = 1.1181371
+
+Time = 1s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 1, Final residual = 6.5065519e-19, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 1, Final residual = 4.0875516e-21, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 0.0092347487, No Iterations 384
+DICPCG:  Solving for p, Initial residual = 7.4249777e-06, Final residual = 6.932631e-08, No Iterations 86
+DICPCG:  Solving for p, Initial residual = 6.9327046e-08, Final residual = 9.8276981e-09, No Iterations 54
+time step continuity errors : sum local = 2.2585198e-12, global = -1.1865401e-13, cumulative = -1.1865401e-13
+Selecting patchDistMethod meshWave
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 1, Final residual = 3.2049486e-09, No Iterations 3
+ExecutionTime = 1.949053 s  ClockTime = 2 s
+
+
+
+volFieldValue mindomain_scalar write:
+    min() of nuTilda = 4.3333648e-07 at location (1.9946302 2.5e-07 0.5) in cell 543
+    min() of nut = 3.1911994e-07 at location (1.9946302 2.5e-07 0.5) in cell 543
+
+volFieldValue mindomain_vector write:
+    minMag() of U = 0.68078612 at location (1.7261398 2.5e-07 0.5) in cell 518
+
+volFieldValue maxdomain_scalar write:
+    max() of nuTilda = 1.9999996e-06 at location (0.0045158825 0.50352127 0.5) in cell 196484
+    max() of nut = 1.4728503e-06 at location (0.0045158825 0.50352127 0.5) in cell 196484
+
+volFieldValue maxdomain_vector write:
+    maxMag() of U = 1.0000327 at location (-0.31774688 0.0087159185 0.5) in cell 124033
+
+yPlus yplus_stats write:
+    patch top y+ : min = 0, max = 0, average = 0
+    patch bottom y+ : min = 0.92253422, max = 0.92254142, average = 0.92253708
+
+Time = 2s
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.28849464, Final residual = 1.0220358e-09, No Iterations 3
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.30956217, Final residual = 5.9259645e-09, No Iterations 9
