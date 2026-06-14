@@ -1,0 +1,59 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "2";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    top
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+100
+(8†¥Õ#_@?¤)O¤_?Ú´“ì-)v?Š<0A¸{?·>p|?V{ÚPEå{?2q‘¥Û{?ş¶Yz?O5æÅB°y?9È~Éy?¿à’x?Ò3ë©x?¤ŸŒT­w?cš×ÍÄLw?¾~ı„¦øv?")_í@°v?†÷wõrv?šÎ»`?v?•NIAv?~·t¿ìu?/´làÊu?¡;'­u?ÂÒ_ç2“u?x¯>|u?ZİĞöjhu?4o+ÿ[Vu?ƒNKûEu?l6zş	7u?5¸/U)u?¨Rj5³u?@4Í·u?0‡+-u?'ÇÆ¾üt?kTôjºòt?ÆÎX»úét?!¢€_Îát?¸dI§+Út?Wµš
+Ót?.f2àfÌt?¶¼Ü}:Æt?§õPaƒÀt?e‚>»t?vËs0j¶t?F5çÀ²t?³53S®t?	-½Vtªt?%w¼C§t?¿no¤t?¼\úĞó¡t?®üÈŸt?9¨´Ğçt?“-eÏIœt?NÅ…èšt?C9©x½™t?0DŞmÂ˜t?(!¹”ñ—t?9Ü’E—t?`‹¹–t?è§I–t?ÉUú0ğ•t?ÏrÖY«•t?Y¼}w•t?óİ5ùQ•t?8pæf8•t?¨Àš‘(•t?án •t?¯íó•t?ŠTTk•t?.3d!#•t?ª1 '•t?4…q©+•t?GVÖ.•t?”’Ø-•t?Ÿ¬j*•t?À@³0"•t?ÇÃÔ¡•t?Ó¢*•t?DL_Ëí”t?ëé|ÂÒ”t?eS÷‡³”t?ºŠÍ”t?Jëhk”t?¬6@D”t?*¥Œ0”t?c²úó“t?È=5Ì“t?sŒÎH¥“t?<“Ju“t?uxÈÙZ“t?YxP‚7“t?90Eo“t?ùN™ô’t?ißúÔ’t?ø¥¶’t?
+¤í_™’t?•LUA}’t?PÃ±b’t?™qH’t?FG¦ú2’t?Ã´X(’t?);
+    }
+    frontandback
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

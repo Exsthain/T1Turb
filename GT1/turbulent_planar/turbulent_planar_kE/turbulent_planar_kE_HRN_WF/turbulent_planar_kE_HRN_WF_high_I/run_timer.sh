@@ -13,4 +13,4 @@ time -p sh run_solver.sh > /dev/null 2>> log.timer
 echo "run_gnuplot.sh" >> log.timer
 time -p sh run_gnuplot.sh > /dev/null 2>> log.timer
 
-timeout -s INT 10s pyFoamPlotWatcher.py --hardcopy --format-of-hardcopy=png log.solver
+timeout -s INT 30s pyFoamPlotWatcher.py --hardcopy --format-of-hardcopy=png log.solver

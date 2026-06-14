@@ -1,0 +1,8 @@
+run_solver.sh
+real 3092.73
+user 3085.33
+sys 8.64
+run_sampling.sh
+real 3.18
+user 2.55
+sys 0.27

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-find . -type f -name "*.png" -delete
 foamCleanTutorials
 
 > log.timer

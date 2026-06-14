@@ -33,8 +33,10 @@
         Adicionado nova malha
             caso 1 - fazer no blockMesh (n fiz ainda)
             outros casos com grid nasa - mudar system/generateMeshDict para suportar mais elementos de malha
+
+            Feito  
     Fazer ajuste de intensidade turbulenta?
-    Fazer ajuste de malhas(nasa grid 1/2)?
+    Fazer ajuste de malhas(nasa grid 1/2)? - feito
 
     - Modelos de turbulência com BC certas - se não estiver algum, ler README.FIRST para entender e escrever no relatório pq não foi simulado.
 

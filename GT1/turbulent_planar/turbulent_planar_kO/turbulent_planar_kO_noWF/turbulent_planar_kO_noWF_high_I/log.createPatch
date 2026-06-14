@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-0b487fc98b88
+Exec   : createPatch -overwrite
+Date   : Jun 13 2026
+Time   : 19:17:09
+Host   : "stein-800g5m800g5w"
+PID    : 591718
+I/O    : uncollated
+Case   : /home/stein/OpenFOAM/stein-12/run/T1Turb/GT1/turbulent_planar/turbulent_planar_kO/turbulent_planar_kO_noWF/turbulent_planar_kO_noWF_high_I
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading "createPatchDict"
+
+
+Doing topology modification to order faces.
+
+Removing patches with no faces in them.
+
+No patches removed.
+Writing repatched mesh to 0
+
+End
+

@@ -1,0 +1,63 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "7";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+112
+(¸W‡⁄Í‰?`¥ò
+TI1?◊ÜÏ ¬??V8ñ¨¬@?”6÷…æó@?≤Ó¸$E@?∞≈Ì®K??±¬dÚY}>?◊æÁ¸ø∆=?◊j¢÷±#=?Ùôëë<?PÕ=°<?ïÉc8Yí;?=‡èF¨;?pﬂí¥:?zA;œ®Q:?ÈR(ı9?Ùß™rû9?¶%ÿ·L9?}õÀò˘ˇ8?múˆ0∑8?º'à‹q8?mGô˛/8?On∑•.Ò7?^rø)µ7?¸t¬Ö≠{7?åÒ+ìD7?lÉ∏®í7?=.ÊÉ‹6?áE7PN´6?Î%∏Í∫{6?ì^Î˚∞M6?ΩƒYK)!6?”≥øÓı5?v˘}˛‹À5? *®˛¢5?H‚>{5?¿oMkT5?'÷d‰|.5?I~Û#Å	5?6Éπ+Â4?Î8Üª\¡4?ΩU":û4?¢µÄö÷{4?c*Â& Z4?ê°PWÒ84?º‡;bD4?ß»˙≥,¯3?/ -†ÿ3?k‹æì|π3?ÈßVòµö3?PEÒﬂX|3?Ù(xÂh^3?Pày“@3?!|Ús~#3?õKßn3?≤&ﬂ≥È2?u&÷CÕ2?î‘M›±2?‰‘]Òî2?6Hn∂y2?Ñ{éf]2?“ÓQÁA2?°92ô&2?T]â,2?;ƒ(~˛Ô1?µemîÒ‘1?∂}S}Óπ1?#<Óû1?ÏÊ3`ˆÉ1?«ƒ-i1?óTøÈ#N1?!≠ƒ
+-31?ˆ…2_$1?w!=˝0?"∆‚·0?!ûÈ∞∆0?Ò“ÅG´0? )J⁄√è0?Å?`%t0?π‹›OX0?zq‘≥7<0?GqÍ)Ì0?E'âl0?Àrÿ†,Õ/?Ñ@jÄ í/?§ﬂcÄ–W/?Êq#ï/?;g,iﬂ.?î+£.?ÑOò±Ui.?ß˛*2.?À†»1˝-?Dr$ˆ… -?á"œJ†ö-?!∏iÌll-?©¶/ü9@-?*"thˆ-?√/1aÌ,?ƒòI∆,?-b÷™†,?ÎßîÀâ|,?ÄﬁÈ€ÃY,?˚múF8,?¥ïh‹,?Ú~.Ñ¯+?—∏œ_⁄+?lÅa§ıº+?œºR.°+?⁄1yÑ+?Æ·§“Fk+?.ìgF>B+?);
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    top
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

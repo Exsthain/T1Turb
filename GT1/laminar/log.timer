@@ -1,0 +1,8 @@
+run_solver.sh
+real 5.90
+user 4.48
+sys 1.11
+run_gnuplot.sh
+real 0.04
+user 0.02
+sys 0.01

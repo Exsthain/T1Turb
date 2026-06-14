@@ -1,0 +1,5 @@
+run_solver.sh
+run_solver.sh: 2: source: not found
+real 105.81
+user 102.89
+sys 3.01
