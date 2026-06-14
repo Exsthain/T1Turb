@@ -1,6 +1,8 @@
 run_solver.sh
-real 125.81
-user 450.09
-sys 47.89
+real 127.04
+user 466.66
+sys 37.17
 run_gnuplot.sh
-
+real 0.04
+user 0.02
+sys 0.01

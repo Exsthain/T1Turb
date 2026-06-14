@@ -28,7 +28,9 @@ boundaryField
     lowerSymmetry
     {
         type            calculated;
-        value           uniform 0;
+        value           nonuniform List<scalar> 
+0
+;
     }
     upperSymmetry
     {
@@ -38,7 +40,9 @@ boundaryField
     inlet
     {
         type            calculated;
-        value           uniform 0;
+        value           nonuniform List<scalar> 
+0
+;
     }
     outlet
     {
@@ -50,6 +54,11 @@ boundaryField
     defaultFaces
     {
         type            empty;
+    }
+    procBoundary2to0
+    {
+        type            processor;
+        value           uniform 0;
     }
     procBoundary2to3
     {

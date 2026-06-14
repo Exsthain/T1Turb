@@ -24,15 +24,13 @@ boundaryField
     {
         type            calculated;
         value           nonuniform List<scalar> 
-156
-(R¡ádBÅ?p¡ádBÅ?_¡ádBÅ?`¡ádBÅ?b¡ádBÅ?R¡ádBÅ?o¡ádBÅ?^¡ádBÅ?`¡ádBÅ?_¡ádBÅ?m¡ádBÅ?R¡ádBÅ?o¡ádBÅ?R¡ádBÅ?_¡ádBÅ?m¡ádBÅ?`¡ádBÅ?E¡ádBÅ?_¡ádBÅ?m¡ádBÅ?b¡ádBÅ?R¡ádBÅ?m¡ádBÅ?b¡ádBÅ?c¡ádBÅ?l¡ádBÅ?S¡ádBÅ?_¡ádBÅ?w¡ádBÅ?I¡ádBÅ?c¡ádBÅ?b¡ádBÅ?_¡ádBÅ?`¡ádBÅ?b¡ádBÅ?`¡ádBÅ?U¡ádBÅ?_¡ádBÅ?€¡ádBÅ?4¡ádBÅ?t¡ádBÅ?b¡ádBÅ?U¡ádBÅ?_¡ádBÅ?}¡ádBÅ?X¡ádBÅ?j¡ádBÅ?C¡ádBÅ?j¡ádBÅ?b¡ádBÅ?b¡ádBÅ?`¡ádBÅ?j¡ádBÅ?i¡ádBÅ?=¡ádBÅ?r¡ádBÅ?R¡ádBÅ?s¡ádBÅ?s¡ádBÅ?Q¡ádBÅ?O¡ádBÅ?q¡ádBÅ?`¡ádBÅ?_¡ádBÅ?P¡ádBÅ?o¡ádBÅ?_¡ádBÅ?`¡ádBÅ?Q¡ádBÅ?q¡ádBÅ?_¡ádBÅ?_¡ádBÅ?R¡ádBÅ?n¡ádBÅ?b¡ádBÅ?^¡ádBÅ?_¡ádBÅ?R¡ádBÅ?m¡ádBÅ?n¡ádBÅ?5¡ádBÅ?o¡ádBÅ?{¡ádBÅ?R¡ádBÅ?`¡ádBÅ?l¡ádBÅ?:¡ádBÅ?l¡ádBÅ?l¡ádBÅ?m¡ádBÅ?T¡ádBÅ?_¡ádBÅ?T¡ádBÅ?l¡ádBÅ?`¡ádBÅ?_¡ádBÅ?`¡ádBÅ?`¡ádBÅ?T¡ádBÅ?s¡ádBÅ?`¡ádBÅ?T¡ádBÅ?v¡ádBÅ?I¡ádBÅ?`¡ádBÅ?t¡ádBÅ?M¡ádBÅ?`¡ádBÅ?l¡ádBÅ?W¡ádBÅ?c¡ádBÅ?X¡ádBÅ?}¡ádBÅ?J¡ádBÅ?_¡ádBÅ?_¡ádBÅ?_¡ádBÅ?`¡ádBÅ?b¡ádBÅ?b¡ádBÅ?`¡ádBÅ?b¡ádBÅ?b¡ádBÅ?`¡ádBÅ?q¡ádBÅ?c¡ádBÅ?Q¡ádBÅ?`¡ádBÅ?p¡ádBÅ?Q¡ádBÅ?_¡ádBÅ?R¡ádBÅ?o¡ádBÅ?P¡ádBÅ?p¡ádBÅ?`¡ádBÅ?`¡ádBÅ?c¡ádBÅ?_¡ádBÅ?_¡ádBÅ?b¡ádBÅ?`¡ádBÅ?_¡ádBÅ?o¡ádBÅ?R¡ádBÅ?_¡ádBÅ?`¡ádBÅ?`¡ádBÅ?o¡ádBÅ?Q¡ádBÅ?S¡ádBÅ?m¡ádBÅ?^¡ádBÅ?_¡ádBÅ?_¡ádBÅ?`¡ádBÅ?);
+130
+(_¡ádBÅ?_¡ádBÅ?_¡ádBÅ?`¡ádBÅ?^¡ádBÅ?`¡ádBÅ?_¡ádBÅ?`¡ádBÅ?`¡ádBÅ?b¡ádBÅ?^¡ádBÅ?^¡ádBÅ?]¡ádBÅ?^¡ádBÅ?c¡ádBÅ?b¡ádBÅ?c¡ádBÅ?]¡ádBÅ?\¡ádBÅ?\¡ádBÅ?d¡ádBÅ?c¡ádBÅ?X¡ádBÅ?_¡ádBÅ?\¡ádBÅ?l¡ádBÅ?\¡ádBÅ?e¡ádBÅ?d¡ádBÅ?\¡ádBÅ?Z¡ádBÅ?_¡ádBÅ?`¡ádBÅ?d¡ádBÅ?\¡ádBÅ?e¡ádBÅ?c¡ádBÅ?d¡ádBÅ?[¡ádBÅ?d¡ádBÅ?c¡ádBÅ?[¡ádBÅ?_¡ádBÅ?Y¡ádBÅ?i¡ádBÅ?_¡ádBÅ?`¡ádBÅ?`¡ádBÅ?e¡ádBÅ?[¡ádBÅ?`¡ádBÅ?b¡ádBÅ?c¡ádBÅ?b¡ádBÅ?_¡ádBÅ?g¡ádBÅ?R¡ádBÅ?h¡ádBÅ?_¡ádBÅ?Y¡ádBÅ?_¡ádBÅ?`¡ádBÅ?`¡ádBÅ?h¡ádBÅ?i¡ádBÅ?h¡ádBÅ?S¡ádBÅ?`¡ádBÅ?_¡ádBÅ?`¡ádBÅ?b¡ádBÅ?n¡ádBÅ?R¡ádBÅ?m¡ádBÅ?F¡ádBÅ?n¡ádBÅ?b¡ádBÅ?_¡ádBÅ?n¡ádBÅ?N¡ádBÅ?e¡ádBÅ?`¡ádBÅ?_¡ádBÅ?^¡ádBÅ?S¡ádBÅ?l¡ádBÅ?`¡ádBÅ?`¡ádBÅ?U¡ádBÅ?l¡ádBÅ?_¡ádBÅ?_¡ádBÅ?`¡ádBÅ?U¡ádBÅ?v¡ádBÅ?`¡ádBÅ?I¡ádBÅ?j¡ádBÅ?l¡ádBÅ?J¡ádBÅ?l¡ádBÅ?`¡ádBÅ?`¡ádBÅ?X¡ádBÅ?l¡ádBÅ?N¡ádBÅ?{¡ádBÅ?E¡ádBÅ?t¡ádBÅ?c¡ádBÅ?_¡ádBÅ?h¡ádBÅ?X¡ádBÅ?O¡ádBÅ?p¡ádBÅ?`¡ádBÅ?h¡ádBÅ?X¡ádBÅ?b¡ádBÅ?_¡ádBÅ?h¡ádBÅ?P¡ádBÅ?W¡ádBÅ?p¡ádBÅ?_¡ádBÅ?_¡ádBÅ?R¡ádBÅ?p¡ádBÅ?_¡ádBÅ?`¡ádBÅ?);
     }
     lowerSymmetry
     {
         type            calculated;
-        value           nonuniform List<scalar> 
-0
-;
+        value           uniform 0;
     }
     upperSymmetry
     {
@@ -42,9 +40,7 @@ boundaryField
     inlet
     {
         type            calculated;
-        value           nonuniform List<scalar> 
-0
-;
+        value           uniform 0;
     }
     outlet
     {
@@ -56,11 +52,6 @@ boundaryField
     defaultFaces
     {
         type            empty;
-    }
-    procBoundary3to0
-    {
-        type            processor;
-        value           uniform 0;
     }
     procBoundary3to2
     {

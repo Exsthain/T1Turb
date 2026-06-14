@@ -36,9 +36,7 @@ boundaryField
     inlet
     {
         type            fixedValue;
-        value           nonuniform List<scalar> 
-0
-;
+        value           uniform 0.1;
     }
     outlet
     {
@@ -47,11 +45,6 @@ boundaryField
     defaultFaces
     {
         type            empty;
-    }
-    procBoundary3to0
-    {
-        type            processor;
-        value           uniform 0.1;
     }
     procBoundary3to2
     {

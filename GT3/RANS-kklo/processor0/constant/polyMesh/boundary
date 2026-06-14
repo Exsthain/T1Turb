@@ -21,58 +21,58 @@ FoamFile
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          159;
-        startFace       33126;
+        startFace       33268;
     }
     lowerSymmetry
     {
         type            patch;
         nFaces          0;
-        startFace       33285;
+        startFace       33427;
     }
     upperSymmetry
     {
         type            patch;
-        nFaces          159;
-        startFace       33285;
+        nFaces          158;
+        startFace       33427;
     }
     inlet
     {
         type            patch;
         nFaces          0;
-        startFace       33444;
+        startFace       33585;
     }
     outlet
     {
         type            patch;
         nFaces          0;
-        startFace       33444;
+        startFace       33585;
     }
     defaultFaces
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          33390;
-        startFace       33444;
+        nFaces          33540;
+        startFace       33585;
     }
     procBoundary0to1
     {
         type            processor;
         inGroups        List<word> 1(processor);
-        nFaces          105;
-        startFace       66834;
+        nFaces          119;
+        startFace       67125;
         matchTolerance  0.0001;
         myProcNo        0;
         neighbProcNo    1;
     }
-    procBoundary0to3
+    procBoundary0to2
     {
         type            processor;
         inGroups        List<word> 1(processor);
-        nFaces          105;
-        startFace       66939;
+        nFaces          108;
+        startFace       67244;
         matchTolerance  0.0001;
         myProcNo        0;
-        neighbProcNo    3;
+        neighbProcNo    2;
     }
 )
 

@@ -37,7 +37,9 @@ boundaryField
     {
         type            turbulentIntensityKineticEnergyInlet;
         intensity       0.033;
-        value           uniform 0.1;
+        value           nonuniform List<scalar> 
+0
+;
     }
     outlet
     {
@@ -46,6 +48,11 @@ boundaryField
     defaultFaces
     {
         type            empty;
+    }
+    procBoundary2to0
+    {
+        type            processor;
+        value           uniform 0.1;
     }
     procBoundary2to3
     {
