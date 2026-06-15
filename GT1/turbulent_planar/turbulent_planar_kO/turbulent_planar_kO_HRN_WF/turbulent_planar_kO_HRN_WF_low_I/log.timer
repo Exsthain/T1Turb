@@ -1,8 +1,3 @@
-run_solver.sh
-real 4.71
-user 3.88
-sys 0.44
-run_gnuplot.sh
-real 0.06
-user 0.05
-sys 0.01
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee38be4e677716d0e1189a6a689aa44e87fe2cd4cc3df431bc962909aac9f35a
+size 87

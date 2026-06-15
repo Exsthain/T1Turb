@@ -1,8 +1,3 @@
-run_solver.sh
-real 28.90
-user 28.14
-sys 0.82
-run_sampling.sh
-real 0.54
-user 0.23
-sys 0.09
+version https://git-lfs.github.com/spec/v1
+oid sha256:86a8630eb2b75e195c314442562ec9c5e0872523ea519c07f0d87648496f779b
+size 90

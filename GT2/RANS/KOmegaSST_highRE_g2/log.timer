@@ -1,5 +1,3 @@
-run_solver.sh
-run_solver.sh: 2: source: not found
-real 132.94
-user 130.25
-sys 2.83
+version https://git-lfs.github.com/spec/v1
+oid sha256:c88ef07566c5e2308ce95acb6ca685cd7f718f3dee3cfae0d3aaa6c3f78daa05
+size 83
