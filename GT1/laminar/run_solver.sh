@@ -13,3 +13,7 @@ foamPostProcess -solver incompressibleFluid -func wallShearStress -noZero -noFun
 
 foamPostProcess -func sampleDict0 -latestTime -noZero
 
+foamPostProcess -func probesDict0 -latestTime -noZero
+
+foamPostProcess -func surfacesDict0 -latestTime -noZero
+

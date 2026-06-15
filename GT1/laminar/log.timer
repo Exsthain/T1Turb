@@ -1,8 +1,262 @@
 run_solver.sh
-real 5.90
-user 4.48
-sys 1.11
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find configuration file probeDict0
+
+Available configured objects:
+109
+(
+CourantNo
+Lambda2
+MachNo
+PecletNo
+Q
+Qdot
+XiReactionRate
+add
+adjustTimeStepToChemistry
+adjustTimeStepToCombustion
+age
+boundaryProbes
+cellMax
+cellMaxMag
+cellMin
+cellMinMag
+checkMesh
+components
+cutPlaneSurface
+cylindrical
+ddt
+div
+divide
+dsmcFields
+enstrophy
+faceZoneAverage
+faceZoneFlowRate
+fieldAverage
+flowType
+forceCoeffsCompressible
+forceCoeffsIncompressible
+forcesCompressible
+forcesIncompressible
+functions
+grad
+graphCell
+graphCellFace
+graphFace
+graphLayerAverage
+graphPatchCutLayerAverage
+graphUniform
+interfaceHeight
+internalProbes
+isoSurface
+log
+mag
+magSqr
+massFractions
+moleFractions
+multiValveEngineState
+multiply
+particles
+patchAverage
+patchDifference
+patchFlowRate
+patchIntegrate
+patchSurface
+phaseForces
+phaseMap
+phaseScalarTransport
+populationBalanceInitialDistributionFs
+populationBalanceMoments
+populationBalanceSizeDistribution
+probes
+randomise
+reconstruct
+residuals
+scalarTransport
+scale
+shearStress
+specieAdvectiveFlux
+specieDiffusiveFlux
+specieFlux
+staticPressureIncompressible
+stopAtClockTime
+stopAtEmptyClouds
+stopAtFile
+stopAtTimeStep
+streamFunction
+streamlinesLine
+streamlinesPatch
+streamlinesPoints
+streamlinesSphere
+subtract
+surfaceInterpolate
+time
+timeStep
+totalEnthalpy
+totalPressureCompressible
+totalPressureIncompressible
+triSurfaceAverage
+triSurfaceDifference
+triSurfaceVolumetricFlowRate
+turbulenceFields
+turbulenceIntensity
+uniform
+userTimeStep
+volAverage
+volIntegrate
+vorticity
+wallBoilingProperties
+wallHeatFlux
+wallHeatTransferCoeff
+wallShearStress
+writeCellCentres
+writeCellVolumes
+writeObjects
+writeVTK
+yPlus
+)
+
+
+file: /home/stein/OpenFOAM/stein-12/run/T1Turb/GT1/laminar/system/functions
+
+    From function bool Foam::readConfigFile(const word&, const string&, dictionary&, const fileName&, const word&, const Pair<string>&, const word&)
+    in file db/dictionary/dictionaryIO.C at line 471.
+
+FOAM exiting
+
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find configuration file surfaceDict0
+
+Available configured objects:
+109
+(
+CourantNo
+Lambda2
+MachNo
+PecletNo
+Q
+Qdot
+XiReactionRate
+add
+adjustTimeStepToChemistry
+adjustTimeStepToCombustion
+age
+boundaryProbes
+cellMax
+cellMaxMag
+cellMin
+cellMinMag
+checkMesh
+components
+cutPlaneSurface
+cylindrical
+ddt
+div
+divide
+dsmcFields
+enstrophy
+faceZoneAverage
+faceZoneFlowRate
+fieldAverage
+flowType
+forceCoeffsCompressible
+forceCoeffsIncompressible
+forcesCompressible
+forcesIncompressible
+functions
+grad
+graphCell
+graphCellFace
+graphFace
+graphLayerAverage
+graphPatchCutLayerAverage
+graphUniform
+interfaceHeight
+internalProbes
+isoSurface
+log
+mag
+magSqr
+massFractions
+moleFractions
+multiValveEngineState
+multiply
+particles
+patchAverage
+patchDifference
+patchFlowRate
+patchIntegrate
+patchSurface
+phaseForces
+phaseMap
+phaseScalarTransport
+populationBalanceInitialDistributionFs
+populationBalanceMoments
+populationBalanceSizeDistribution
+probes
+randomise
+reconstruct
+residuals
+scalarTransport
+scale
+shearStress
+specieAdvectiveFlux
+specieDiffusiveFlux
+specieFlux
+staticPressureIncompressible
+stopAtClockTime
+stopAtEmptyClouds
+stopAtFile
+stopAtTimeStep
+streamFunction
+streamlinesLine
+streamlinesPatch
+streamlinesPoints
+streamlinesSphere
+subtract
+surfaceInterpolate
+time
+timeStep
+totalEnthalpy
+totalPressureCompressible
+totalPressureIncompressible
+triSurfaceAverage
+triSurfaceDifference
+triSurfaceVolumetricFlowRate
+turbulenceFields
+turbulenceIntensity
+uniform
+userTimeStep
+volAverage
+volIntegrate
+vorticity
+wallBoilingProperties
+wallHeatFlux
+wallHeatTransferCoeff
+wallShearStress
+writeCellCentres
+writeCellVolumes
+writeObjects
+writeVTK
+yPlus
+)
+
+
+file: /home/stein/OpenFOAM/stein-12/run/T1Turb/GT1/laminar/system/functions
+
+    From function bool Foam::readConfigFile(const word&, const string&, dictionary&, const fileName&, const word&, const Pair<string>&, const word&)
+    in file db/dictionary/dictionaryIO.C at line 471.
+
+FOAM exiting
+
+real 7.08
+user 5.15
+sys 1.35
 run_gnuplot.sh
-real 0.04
-user 0.02
-sys 0.01
+real 0.15
+user 0.05
+sys 0.04

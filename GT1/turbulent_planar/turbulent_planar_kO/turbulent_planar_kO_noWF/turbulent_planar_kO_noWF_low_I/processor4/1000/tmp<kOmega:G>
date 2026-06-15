@@ -1,0 +1,27 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField::Internal;
+    location    "1000";
+    object      tmp<kOmega:G>;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+value           nonuniform List<scalar> 
+188
+(ÑfäNØ>Pw.Å_NØ>	~šöØMØ>…ïF\MØ>æ^Ö¥ßLØ>KK'KlLØ>f`*mùKØ>nT/KØ>6m"!KØ>?2óôºJØ>1fWJØ>iêÙíøIØ>ÖGPL	?FÚ0ì	?ö”Ä	?œp/ÿ	?’Áwƒ	?ñõõ	?¬¾ß˜	?ås)	?«lá½	?/ñ§U	?\	Úñ	?çKMw	?R!yúœp?vÌ›îo?¡\x#Mo?•¥È«n?°i„¢n?´‡Äm?Wiˆ6ól?€áágl?š'½äk?ÚD¦ck?òMöÓèj?â¦ÄFoj?_ï.6,?£nÿ‘5,?nİhß5,?Ñ´+s4,?Ø_sî3,?èÒÂ_h3,?òÍì2,?EtVxo2,?ØnÔ%û1,?#|±)‡1,?LÑ1,?BN)E®0,?ZU–t5?ì›İot5?­áFy®s5?eÏé¤@s5?w<®Ür5?úâ„wr5?ãräbr5?nû~òºq5?Y®/cq5?] Hq5?V‰¹p5?3ßAgp5?¶+Ñ¹Ó=?òí/=?æòn¼=?yÖnÆ=?Ó~=?wÊqò=?6	…Xr=?<R§ğŒ=?°]‚‚xŒ=?b»¿Ëÿ‹=?¼í¥Ü‹=?IÃ-Ì‹=?ï….A
+C?8ÆÓ C?•¼,CC?·–œ	âC?™ÒiŠC?°e›0C?á×…zŞC?x§ ‹C?İA±>C?#mgcğC?“Ié¨C?¦§™Ë_C?VŸœ
+€G?²ïˆG?Ôk]gG?ÍGŸ~G?[“J×3~G?]{’Å}G?k{°a}G?ì\4¥ú|G?ÎTş>œ|G?t”±ø<|G?J¼Ñøä{G?‹Ñ—’‹{G?»Ş‚N;{G?qÆ¯úıôK?n&dôK?ÿÇäÜóK?	_cHOóK?™±ªŒĞòK?±ÀMòK?çÛüÚÖñK?ˆ¾w]ñK?qXÌíğK?Eû×|ğK? [ê´ğK?+îj¨ªïK?Ê¥±0KïK?.ÕÆò0P?õFMÂ/P?Õ1–Pt/P?íÀ„"/P?Š2ŸÙ.P?Ş.”.P?›Ëå­I.P?Îr¢œ.P?ôlRÃ-P?£#‚-P?Çn^)F-P?Jñ-P?¤¡ÏÑ,P?_ë›¼vYR? Fä>YR?ı"¼¶ºXR?9£iA^XR?…a%XR?ä`åÏ¶WR?[öÿ´iWR?ã/~WR?ÆbZÒVR?i*útˆVR?³šÓDVR?—˜«¨ÿUR?G'¤×ÁUR?’œœpÊpT?²¼íÜZpT?×)ÆõùoT?—ÜR“oT?PşÕ`8oT?07¬ÙnT?=Åá>„nT?sş'j,nT?:Ö.ÜmT?¢“£gŠmT?]Zp?mT?°·M«òlT?TR‚®lT?ÇèœqV?N	Ğ"qV?‘r•<¸pV?ÂjæúGpV?ËŞ«äoV?¨/C}oV?VÍoV?´¹Á¿nV?¦9èhnV?Äl°nV?®×È¼mV?vk<ÏhmV??R´mV?}mTXX?“e[†ûWX?KH5i‰WX?¾•3)WX?za;¥VX?RãQ)5VX?óQgzĞUX?Gİj¿hUX?Š,”
+UX?J³ª“©TX?[ËŒ,QTX?Ãç’jöSX?ŞøX¦SX?’#\à"Z?óõñDS"Z?NÊnÙ!Z?ÈŒİW!Z?Áuñxå Z?Èím Z?sxf Z?ïÅà‘“Z?f"j.Z?AÄVQÇZ?SV¤åhZ?å>{ÅZ?YÕA±Z?);
+
+
+// ************************************************************************* //

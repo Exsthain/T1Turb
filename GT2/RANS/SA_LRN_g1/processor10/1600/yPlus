@@ -1,0 +1,112 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "1600";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+39
+(
+0.19237722
+0.19191793
+0.19145542
+0.19098931
+0.19051927
+0.19004486
+0.18956558
+0.18908097
+0.18859059
+0.1880939
+0.18759027
+0.1870791
+0.18655979
+0.18603159
+0.18549363
+0.18494529
+0.1843977
+0.18386826
+0.18336219
+0.18287778
+0.18241336
+0.18196742
+0.1815387
+0.18112601
+0.18072823
+0.1803443
+0.17997337
+0.17961463
+0.1792673
+0.17893062
+0.17860384
+0.1782864
+0.17797735
+0.17767663
+0.17738075
+0.1770948
+0.17679639
+0.1765373
+0.1761043
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary10to8
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary10to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

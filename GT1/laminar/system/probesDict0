@@ -22,6 +22,7 @@ fields
     p
     U
     wallShearStress
+    yPlus
 );
 
 // Locations to be probed. runTime modifiable!

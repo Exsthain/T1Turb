@@ -1,0 +1,112 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "1300";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+34
+(
+0.2252775
+0.22356998
+0.22054957
+0.21801097
+0.21597304
+0.21430478
+0.21289509
+0.21163798
+0.21048425
+0.20941561
+0.20841667
+0.20747455
+0.20657897
+0.20572133
+0.20489477
+0.20409464
+0.2033178
+0.20256181
+0.20182435
+0.20110264
+0.200394
+0.19969657
+0.19900983
+0.19833399
+0.19766891
+0.19701383
+0.19636695
+0.19572532
+0.19508666
+0.19445107
+0.19382024
+0.19319504
+0.19257441
+0.1919558
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary10to8
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary10to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary10to13
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

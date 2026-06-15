@@ -15,3 +15,5 @@ plot \
 	1.9865597264*(1-x**2/0.1**2) lc rgb 'red' title 'Analytical solution'
 
 #    EOF
+
+

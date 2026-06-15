@@ -1,0 +1,118 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "800";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+30
+(
+0.00030275609
+0.00030090069
+0.0002990704
+0.00029726449
+0.00029548012
+0.00029371508
+0.00029196863
+0.00029024081
+0.00028852958
+0.00028683221
+0.00028514764
+0.00028347669
+0.00028181809
+0.00028016871
+0.00027852739
+0.00027689471
+0.00027527038
+0.0002736521
+0.00027203784
+0.00027042744
+0.00026882165
+0.00026721849
+0.00026561499
+0.0002640105
+0.00026240639
+0.00026080102
+0.00025918962
+0.00025757247
+0.00025595124
+0.00025432426
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary8to0
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary8to1
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary8to9
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary8to10
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary8to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

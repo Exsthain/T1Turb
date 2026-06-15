@@ -1,0 +1,108 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "800";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+30
+(
+0.064853068
+0.064254783
+0.063650076
+0.06303829
+0.062418709
+0.061790568
+0.061153173
+0.060519246
+0.059908836
+0.059327758
+0.058773783
+0.058244858
+0.057739055
+0.057254606
+0.056789924
+0.056343584
+0.055914304
+0.055500921
+0.055102379
+0.054717711
+0.054346023
+0.053986483
+0.0536383
+0.053300677
+0.052972831
+0.052653533
+0.052341714
+0.052036117
+0.051742258
+0.051321066
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary9to8
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary9to10
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary9to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

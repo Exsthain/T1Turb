@@ -1,0 +1,112 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "700";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+39
+(
+0.19238008
+0.19192064
+0.19145799
+0.19099175
+0.19052158
+0.19004705
+0.18956767
+0.18908296
+0.18859249
+0.18809573
+0.18759202
+0.18708078
+0.18656142
+0.18603317
+0.18549518
+0.18494681
+0.1843992
+0.18386976
+0.18336369
+0.1828793
+0.1824149
+0.18196901
+0.18154033
+0.1811277
+0.18072999
+0.18034613
+0.17997528
+0.17961664
+0.17926941
+0.17893285
+0.17860619
+0.17828888
+0.17797996
+0.17767939
+0.17738367
+0.17709788
+0.17679965
+0.17654074
+0.17610806
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary10to8
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary10to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

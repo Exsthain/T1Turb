@@ -1,0 +1,134 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "1900";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+65
+(
+0.1306811
+0.12987325
+0.12910511
+0.12837384
+0.1276769
+0.127012
+0.12637709
+0.12577024
+0.12518972
+0.12463394
+0.12410143
+0.12359085
+0.12310094
+0.12263059
+0.12217872
+0.12174435
+0.12132656
+0.12092449
+0.12053734
+0.1201644
+0.11980495
+0.11945837
+0.11912404
+0.11880139
+0.11848988
+0.118189
+0.11789829
+0.11761729
+0.11734558
+0.11708275
+0.11682843
+0.11658225
+0.11634386
+0.11611296
+0.11588923
+0.11567236
+0.1154621
+0.11525816
+0.1150603
+0.11486827
+0.11468185
+0.11450081
+0.11432494
+0.11415404
+0.11398793
+0.11382642
+0.11366933
+0.1135165
+0.11336777
+0.11322298
+0.11308198
+0.11294464
+0.11281081
+0.11268037
+0.11255319
+0.11242915
+0.1123081
+0.11218999
+0.11207452
+0.11196193
+0.11185113
+0.1117438
+0.11163534
+0.111542
+0.11138477
+)
+;
+    }
+    frontandback
+    {
+        type            empty;
+    }
+    procBoundary2to0
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary2to3
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

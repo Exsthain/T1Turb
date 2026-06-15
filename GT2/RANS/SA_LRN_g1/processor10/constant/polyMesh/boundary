@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+9
+(
+    bottom
+    {
+        type            wall;
+        inGroups        List<word> 1(wall);
+        nFaces          39;
+        startFace       1579;
+    }
+    back
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          820;
+        startFace       1618;
+    }
+    front
+    {
+        type            empty;
+        inGroups        List<word> 1(empty);
+        nFaces          820;
+        startFace       2438;
+    }
+    inlet
+    {
+        type            patch;
+        nFaces          0;
+        startFace       3258;
+    }
+    outlet
+    {
+        type            patch;
+        nFaces          20;
+        startFace       3258;
+    }
+    top
+    {
+        type            patch;
+        nFaces          0;
+        startFace       3278;
+    }
+    slipsurface
+    {
+        type            patch;
+        nFaces          0;
+        startFace       3278;
+    }
+    procBoundary10to8
+    {
+        type            processor;
+        inGroups        List<word> 1(processor);
+        nFaces          22;
+        startFace       3278;
+        matchTolerance  0.0001;
+        myProcNo        10;
+        neighbProcNo    8;
+    }
+    procBoundary10to11
+    {
+        type            processor;
+        inGroups        List<word> 1(processor);
+        nFaces          41;
+        startFace       3300;
+        matchTolerance  0.0001;
+        myProcNo        10;
+        neighbProcNo    11;
+    }
+)
+
+// ************************************************************************* //

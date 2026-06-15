@@ -1,0 +1,122 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "1900";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+34
+(
+0.12889626
+0.12615386
+0.12365615
+0.12136464
+0.11924884
+0.11728427
+0.11545108
+0.11373296
+0.11211652
+0.11058981
+0.10914378
+0.10776986
+0.10646099
+0.10521099
+0.10401447
+0.10286672
+0.10176354
+0.10070126
+0.099676569
+0.098686531
+0.097728499
+0.096800085
+0.095899131
+0.095023677
+0.094171939
+0.093342289
+0.092533234
+0.091743399
+0.090971518
+0.090216421
+0.089477025
+0.088752323
+0.088041379
+0.087343321
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary4to5
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to6
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to7
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to10
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

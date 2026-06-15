@@ -1,0 +1,28 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField::Internal;
+    location    "900";
+    object      tmp<kOmega:G>;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+value           nonuniform List<scalar> 
+188
+(eo8ÇI`?ák)ïI`?Ì¸àI`?2j|ŞI`?[*IØI`?ùª:âI`?ñ5lëI`?®!|ùI`?_v+-I`?9‚"hI`??÷fI`?ŸCï‚I`? ZM5,a?-/´y5,a?Ó&k5,a?_0bh5,a?tiÇa5,a?uèÆl5,a?Jäiu5,a?²#]„5,a?«·¸5,a?&H÷5,a?ú\%7,a?-l8õ5,a?Y0:ÒTûa?ŒÚÔUûa?bÒôTûa?VŒğTûa?>J²éTûa?§?àôTûa?X¤xıTûa?¸GÀUûa?oPBUûa?O B„Uûa?
+ÕnVûa?ÆG˜jUûa?ÈßâRıµb?”œ‡ıµb?Xsxıµb?ç²Şsıµb?KØälıµb?áĞ0xıµb?
+|¹€ıµb?;zSıµb?eWÆıµb?õCşµb?Õ–¾2ÿµb?\~èıµb?Ã
+uä[c?¸‹­ä[c?àªßä[c?•x#™ä[c?²o+’ä[c?«nsä[c?ŠQë¥ä[c?ÀƒÓµä[c?*pEìä[c?Ÿ™5å[c?HÅ¸gæ[c?ø'	å[c?S^sìØìc?›7V(Ùìc?aòÚÙìc?]§ÕÙìc?«1Ùìc?Á)Ùìc?ÚË Ùìc?ÙÅ0Ùìc?ˆ¡fgÙìc?»U´Ùìc?ĞÍğÚìc?şF¬€Ùìc?¥|Fèºhd?ÆàÆ'»hd?”æ^»hd?Îä»hd?ÿˆh»hd?uŞG»hd?ô( »hd?}'0»hd?Wà¿f»hd?‹èV·»hd?*÷ü¼hd?¼&K}»hd?­dvÏd?ÛYQvÏd?7MbFvÏd?fsH<vÏd?o!O6vÏd?‡Ç@vÏd?’&IvÏd?ê•÷YvÏd?ÈCUvÏd?œävÏd?‚M02xÏd?Ç`–¥vÏd?Ù>>vÏd?/MäÑü e?rú?ı e?Nìı e?™÷3ı e?iFïüü e?G–åı e?É1ı e?j™n ı e?ìbTVı e?8A®ı e?=5ÿ e?‹kı e?(¤²Äû e?Q…[îD]e?c5E]e?åb_.E]e?':ª E]e?÷ QE]e?Îé%E]e?~Ùğ-E]e?Vk†?E]e?ä§tE]e?±úÏE]e?Qö'G]e?ÿÊ‰E]e?.ŠÛB]e?¢´<éD„e?•‚M1E„e?ÛîØ,E„e?¹øE„e?/HäE„e?æƒn"E„e?ZĞ*E„e?ŒÌÕ<E„e?-BqE„e?q­÷ÏE„e?"7Õ*G„e?lgû„E„e?%½úïB„e?Œmtò•e?w8Ñ¿ò•e?¥Ù¾ò•e?ˆ´«ò•e?Í©ò•e?Ll±ò•e?øÚ	ºò•e?ì5Íò•e?Múwó•e?Hİfó•e?¶`wÌô•e?8uó•e?ÁTğrğ•e?j%@§A’e?¼ÜñúA’e?Ç³ıA’e?€¡ÎåA’e?ö´JåA’e?©‚ÈëA’e?³íôA’e?4xõ	B’e?ëˆœ@B’e?-ŒÉ±B’e?#2D’e?1lÜ=B’e?b^³c?’e?ÌÓ»ä+ye?@L<,ye?ô8"C,ye?Éa“%,ye?E!,ye?4<Ø ,ye?çqÌ&,ye?¸"`<,ye?£zt,ye?bºí,ye?*n.ye?·Éìy,ye?ø£ì§)ye?ü‡œßñq2AdË]òñq2A%ÿññq2A<#ğñq2A#çíñq2A
+®äêñq2A3wüçñq2A|šLäñq2Aã–İñq2AìÎñq2A¯¡=§ñq2A4Mñq2AcÄG3ğq2A);
+
+
+// ************************************************************************* //

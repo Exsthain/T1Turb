@@ -1,0 +1,122 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "600";
+    object      yPlus;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    bottom
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 
+34
+(
+0.12890311
+0.12616029
+0.1236622
+0.12137036
+0.11925426
+0.11728944
+0.11545601
+0.11373767
+0.11212104
+0.11059412
+0.10914793
+0.10777385
+0.10646482
+0.10521468
+0.10401803
+0.10287015
+0.10176687
+0.10070447
+0.099679676
+0.098689541
+0.097731415
+0.09680291
+0.09590187
+0.095026333
+0.094174514
+0.093344788
+0.09253566
+0.091745754
+0.090973804
+0.090218642
+0.089479183
+0.08875442
+0.088043418
+0.087345303
+)
+;
+    }
+    back
+    {
+        type            empty;
+    }
+    front
+    {
+        type            empty;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    top
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    slipsurface
+    {
+        type            calculated;
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary4to5
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to6
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to7
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to10
+    {
+        type            processor;
+        value           uniform 0;
+    }
+    procBoundary4to11
+    {
+        type            processor;
+        value           uniform 0;
+    }
+}
+
+
+// ************************************************************************* //

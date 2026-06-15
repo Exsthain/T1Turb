@@ -1,0 +1,97 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "700";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   nonuniform List<scalar> 
+188
+(ZÕ'][¤c@YG*Z¤c@Ù¸[¤c@&¨S2Z¤c@–‹UÚZ¤c@—e-Z¤c@¡ÍÎŸZ¤c@¤®áZ¤c@–àìeZ¤c@-UfõY¤c@¡'$Z¤c@¾Ğ›¡Y¤c@æ›³¹Ác@Ôt¸Ác@B-ˆj¹Ác@Çëz¸Ác@àá4¹Ác@õôé€¸Ác@pÅïû¸Ác@V#>s¸Ác@Õ{ŞÃ¸Ác@%P¸Ác@w ır¸Ác@st)ÿ·Ác@ûE¸ô÷c@oÙÔ÷c@±6°÷c@¯Â÷³÷c@¿ÕÙ{÷c@[»÷c@
+ğƒE÷c@Öß´÷c@bØz÷c@³å!—÷c@'zÂ÷c@ãî˜K÷c@[È[?d@õšQZ?d@jÊ‰[?d@%¤yrZ?d@‚†ZV[?d@?Í¾ƒZ?d@ÏêT#[?d@s»…Z?d@Üt1òZ?d@ÀFqZ?d@4Å¨Z?d@wÌ,Z?d@=tªI,–d@Î}©*–d@Dì—,–d@§‘¼Ø*–d@³æŞ+–d@<ö*–d@ù´ ¯+–d@¢Öé+–d@_ö‚+–d@785ø*–d@p‡=+–d@¼Hg¼*–d@@|rÂød@EnRñ	ød@ÿìiød@Q>1
+ød@Ñ±Å^ød@g!X\
+ød@±Øx3ød@82u
+ød@»&Ÿød@_7lu
+ød@Ô…xË
+ød@g®C
+ød@Gâ«>be@ÀC
+6be@HÁ-be@—ˆÛ‡be@;QŒábe@'–$Âbe@µÇCºbe@Š¬Üçbe@"ôa—be@¼ó"ôbe@è$ï\be@¶ÁÌbe@ÒŒïTÙÑe@ö$(×Ñe@é·L(ÙÑe@™>@t×Ñe@ˆ†ıØÑe@bd¾×Ñe@é+ÚØÑe@Ö¾Óñ×Ñe@;âA¼ØÑe@¨ƒŠ
+ØÑe@ÕjÇ‡ØÑe@rÛWí×Ñe@˜æ"ã×Ñe@ìÈ&XfEf@%™xĞcEf@ŞI.fEf@t˜¦IdEf@ä]gfEf@!å:¤dEf@sğÆåeEf@/ıÕådEf@úÀ¸ÌeEf@"õLeEf@ãPVeEf@Å¯GùdEf@çEûdEf@Qí;­»f@ŞRÃß»f@ÅĞ…»f@#‚m»f@hÕõ]»f@ÙİØ»f@m"ÊA»f@ á(»f@Èía-»f@Sn7[»f@‚»f@×qT»f@‡‚/d»f@Í‹W›1g@Mœ;A˜1g@f%`1›1g@äÙ¼ã˜1g@A–z
+›1g@›öş_™1g@ËÈnñš1g@ px¾™1g@#¬eáš1g@&ˆ¤ı™1g@û¾š1g@ñU š1g@'  š1g@d¯5Ù§g@W¼Ò©Õ§g@€ŸbåØ§g@´LaÖ§g@¿¿Ø§g@8a îÖ§g@Š
+Æ¨Ø§g@ïôZ×§g@ûÇœØ§g@^şÉ¦×§g@\£ûØ§g@¢Ïu¶×§g@˜USä×§g@¨?òh@
+c°‘îh@‚ô?òh@ÅêT]ïh@Ékóñh@©%ûïh@FÇ.ßñh@º¼öuğh@:jŞÖñh@ı-Îğh@hR¿ñh@µ]ßèğh@Äİj&ñh@ŠkòÛ4h@oÁà0h@Üo5´4h@õY_À1h@e}İ4h@í{Nn2h@£â{4h@#dúö2h@àrÜv4h@@?0[3h@=?%d4h@ë¼¦€3h@½¦òÍ3h@ÛKs/i@Èíğæi@ävi@c êÙi@ƒ2 Şi@,;——i@#ÿ/Îi@×‰-i@èÙÌi@P§Gi@Ón¶½i@RÀ+Íi@Ç*i@);
+
+boundaryField
+{
+    top
+    {
+        type            fixedValue;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    bottom
+    {
+        type            symmetry;
+    }
+    front
+    {
+        type            empty;
+    }
+    back
+    {
+        type            empty;
+    }
+    procBoundary2to0
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+12
+(¯+ø'oi@äÔpc#oi@ç¤èË'oi@öûh$oi@Áï¤'oi@ñÌ5%oi@ş:µ”'oi@°xØ%oi@­••'oi@æ8S&oi@HõˆŠ'oi@Ëş?&oi@);
+    }
+    procBoundary2to1
+    {
+        type            processor;
+        value           uniform 203.473508177;
+    }
+    procBoundary2to3
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+16
+(Ê0øXY¤c@lúw¸·Ác@#^s	÷c@á‹²ñY?d@3RÑŠ*–d@.|i
+ød@âˆy´be@âˆy´be@›µßÓ×Ñe@¿.èdEf@›L»f@^P”š1g@½Åì¿×§g@£àaûğh@E!&œ3h@,²ƒñi@);
+    }
+    procBoundary2to5
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+15
+(å_ÆçY¤c@§ŠR+¸Ác@†-J÷c@áOîY?d@§4*–d@u4h	ød@Ê¥—be@¸óºYÖÑe@H†cEf@ÆüËù»f@ƒÏkB—1g@¡$’Ô§g@1Uaíh@ğ˜/h@6øs†i@);
+    }
+}
+
+
+// ************************************************************************* //
