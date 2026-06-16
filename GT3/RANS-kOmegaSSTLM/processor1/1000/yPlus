@@ -1,68 +1,0 @@
-/*--------------------------------*- C++ -*----------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  12
-     \\/     M anipulation  |
-\*---------------------------------------------------------------------------*/
-FoamFile
-{
-    format      binary;
-    class       volScalarField;
-    location    "1000";
-    object      yPlus;
-}
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-dimensions      [];
-
-internalField   uniform 0;
-
-boundaryField
-{
-    lowerWall
-    {
-        type            calculated;
-        value           nonuniform List<scalar> 
-159
-(Tã|Ÿzå√?âéPﬁÓ¨√?Çí6I:–√?™^∂√ÎÚ√?Óª®q'ƒ?è2sÉ9ƒ?Z>™UÄ^ƒ?i3YÑƒ?i1ls€´ƒ?{)wÇ¿’ƒ?ZÂ¿Í„˙ƒ?wHé÷ˇ≈?äc˝Æ@G≈?¸`Hl≈?`Áè≈?*ëòQÊ≥≈?’;Sc:÷≈?2^”Wı≈?k`lŸ∆?'ü2v$∆?t≈:B≈<∆?UÍ”AS∆?ê˘)Èe∆?ÅÀêÕÃt∆?í'=¡çÄ∆?!nß¬Îâ∆?4N‡;të∆?RD≥vó∆?mÜú∆?é¸˚Û“ü∆?ØÒ˜ÊH§∆?˘’<gÖ™∆?ÒO”»±∆?”OÎ(∂∆?=Ó“ßπ∆?¶õcàƒª∆?Jvs6’º∆?_L'@Ω∆?64Òº º∆?µÌÌª∆?â,—8û∫∆?nƒìÓ∏∆?ìﬂ@Ï∂∆?0ÃŸ"°¥∆?æ˙;≤∆?‚Æ¯ñMØ∆?ˇ‰U1N¨∆?#±Øë©∆?ë´/°√•∆?˙tB¢∆?6‘2üû∆?L€ Ì›ö∆?∏
-ˇñ∆?€J>µì∆?÷ﬁÉ5‰é∆?Ó#HZ®ä∆?À-PÜ∆?˛ˆ&ﬂÅ∆?›p“WY}∆?+`}¡x∆?)çÈt∆?en¶co∆?…∂°j∆?Ñ]q©◊e∆?Ã#î'a∆? >Ö)\∆?è‹¡JW∆?°tÇfR∆?®±Ç|M∆?B–êH∆?\∂ëª°C∆?›«“u±>∆?7Ç2º9∆?ˆn∆4∆?ŸÛ2µÀ/∆?å&XÜ”*∆?p¯êñŸ%∆?í†Öl‡ ∆?<'
-ò‚∆?‹ò15‰∆?N‹Ÿ;Â∆?qË<c·∆?FWD⁄∆?*‘	∆∆?UÎuç¨˝≈?˘ˇWÕx¯≈?†+„¿Û≈?kºáî·Ì≈?Éb·µÅÂ≈?!B^§›≈?ßÛi÷≈?+Ï5À–≈?h±πˇπÀ≈?˚Èb;ˆ∆≈?¬Mb∑b¬≈?≤Ï—°ÒΩ≈?Hfçµïπ≈?iµKµ≈?¨Nﬂs±≈?ï‡≠fÿ¨≈?˙]∞Á≠®≈?Oi6è§≈?$X]Yv†≈?nDl‘gú≈?2(–]ò≈?óÿ\î≈?ÁK°^ê≈?á;6fkå≈?g˛BS{à≈?£∫}JñÑ≈?›E§i≥Ä≈?ƒF£≥Ÿ|≈?åıîy≈?I$ì76u≈?œ.	–lq≈?OÏ9Æm≈?.!Òi≈?Nå¯⁄=f≈?É'È1ãb≈?†¬Ò‰^≈?dÅ%R@[≈?X“ßW≈?phT≈?Ïc÷-ÑP≈?ª‡∏V¯L≈?Q”_zI≈?∫uh¸E≈?+rÉSãB≈?îÖYv?≈?hR§g≥;≈?î‡’mJ8≈?r˘ocÔ4≈?rUí1≈?“ KPD.≈?˛KDÚ*≈?º◊¨r¥'≈?“÷˚°t$≈?#ƒbåC!≈?U¢«,≈?õEl´Í≈?Ï¥N¬≈?Ìô∫[¨≈?õìöØï≈?bôÚRê≈?±Ê˛Ñ≈?·úlæä≈?m3atâ≈?‘˚p“û≈?îèfá¶ˇƒ?ÇÈÍ€—¸ƒ?¬¢Åb’˘ƒ?)ÜÇF!˜ƒ?∏jÇ+¯Ûƒ?ÚeàßôÒƒ?¯’kÂÌƒ?\ò•™xÏƒ?,çöPBÁƒ?’^ÛÎNËƒ?Ój‡£8ﬁƒ?);
-    }
-    lowerSymmetry
-    {
-        type            calculated;
-        value           nonuniform List<scalar> 
-0
-;
-    }
-    upperSymmetry
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-    inlet
-    {
-        type            calculated;
-        value           nonuniform List<scalar> 
-0
-;
-    }
-    outlet
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-    defaultFaces
-    {
-        type            empty;
-    }
-    procBoundary1to0
-    {
-        type            processor;
-        value           uniform 0;
-    }
-}
-
-
-// ************************************************************************* //

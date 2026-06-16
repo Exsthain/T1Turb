@@ -50,6 +50,14 @@ timePrecision   6;
 
 runTimeModifiable true;
 
+cacheTemporaryObjects
+(
+    "kOmega:G"
+    "(beta*omega)"
+    "nuEff"
+    "(nut+nu)"
+);
+
 // ************************************************************************* //
 
 functions
@@ -108,7 +116,7 @@ minmaxdomain_vector
 
     //mode component;
 
-    select          all;
+    select      all;
 
     operation       none;
 
@@ -145,13 +153,38 @@ maxdomain_vector
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
+//Saves yplus field at the given interval
 
-    yplus
+    yplus_field
     {
-    	type yPlus;
-    	functionObjectLibs ("libutilityFunctionObjects.so");
-    	enabled true;
+        type yPlus;
+        libs ("libutilityFunctionObjects.so");
+
+        enabled true;
+        //log false;
+
         writeControl outputTime;
+    }
+
+///////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+//Print y+ stats every iteration without saving the field
+
+    yplus_stats
+    {
+        type yPlus;
+        libs ("libutilityFunctionObjects.so");
+
+        enabled true;
+
+        writeControl timeStep;
+        writeInterval 1;
+
+//Leave object empty to not save the field
+//This will only print the yplus values every timestep and will not save the field
+        objects ();
+        log true;
     }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -171,6 +204,40 @@ wallShearStress1
 
     //log true;
 }
+
+///////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////
+
+writeObjects1
+{
+    type        writeObjects;
+    libs        ("libutilityFunctionObjects.so");
+
+    enabled           on;
+
+    //writeControl     outputTime;
+
+    //writeControl     timeStep;
+   // writeInterval    1;
+
+    writeControl     outputTime;
+    //writeInterval    $endTime;
+
+//Switch-off to save complex cacheTemporaryObjects names
+    regExp  off;
+
+    objects     
+    (    
+    "kOmega:G"
+    "(beta*omega)"
+    "nuEff"
+    "(nut+nu)"
+    );
+}
+
+// #includeFunc writeObjects(regExp=off, "CDES*delta")
 
 ///////////////////////////////////////////////////////////////////////////
 

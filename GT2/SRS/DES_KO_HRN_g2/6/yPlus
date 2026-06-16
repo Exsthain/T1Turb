@@ -1,61 +1,0 @@
-/*--------------------------------*- C++ -*----------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  12
-     \\/     M anipulation  |
-\*---------------------------------------------------------------------------*/
-FoamFile
-{
-    format      binary;
-    class       volScalarField;
-    location    "6";
-    object      yPlus;
-}
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-dimensions      [];
-
-internalField   uniform 0;
-
-boundaryField
-{
-    inlet
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-    top
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-    outlet
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-    slipsurface
-    {
-        type            calculated;
-        value           uniform 0;
-    }
-    bottom
-    {
-        type            calculated;
-        value           nonuniform List<scalar> 
-100
-(nnÉ@ê•7?s‰ŸÃ^?8‘v?+ı∫π*|{?bÌÚ≈e|?∆61Ç⁄{?Îz∆¥¸{?lÀlLz?÷ø‡∫	¢y?s\ºÕ	y?Ùù#SÄx?±pì†8x?”œ∫Ñêw?KÊıë&w?;yyµ√v?È5‚”ev?€1gCmv?Ï∆…∏u?tñCiu?˝È{™;u?°÷L[’t?Ùã’‘Yêt?äå™ÃÒNt?a?Wlút??5:<.’s?„r˙÷Äús?«¶ñ¨xfs?'œ≤3s?íY: 
-s?ı˜≠É”r?ñøUçZßr?Ò8ïKz}r?∞iÕ Ur?i∂?R10r?˝ôk¥ír?q˝·“Íq?˘o
-Œ q?â-o¨q?∞në¢èq?1ÏÿPtq?ßBw=eZq?9ôÃAq?9ÇÁÚq*q?TuΩEq?≈ÿ–7ˇp?—â√¶9Îp?mÌ8=ÿp?&TÅÑ5∆p?<Öiµp?ßxá˚–§p?⁄	ÒÓXïp?∆Ë/C´Üp?ÛjÍ™øxp?√NÙúçkp?Ke·˜_p? mª[6Sp?Sh¿Hp?Øg”8l=p?óêÆSk3p?Vò~e˙)p?ë•2!p?ñ æÎ≤p?víud—p?’ª»i	p?ªl‘wvp?˙ˆ¸ı‚˜o?Zﬁ‘™Îo?&µSM@‡o?›[ •õ’o?ß‡6¥Ào?)…[ƒÄ¬o?4æï˘πo?Ö
-a≤o?c}±Cœ™o?Tç§o?≥t7≤ˆùo?˚‘y,Vòo?ÌÏÇ3ìo?•Ê§ááéo?2öÛÅKäo?ÚË	'yÜo?7RÚW
-Éo?ÈÊ’¯o?ñVoA>}o?\˚æ8‘zo?ﬁﬁát¥xo?≥¯KÌÿvo?<Ø„;uo?Ñ4bæ◊so?†kr“¶ro?Çrcp£qo?1ìp‰«po?∂Rpo?\a8Üroo?ë°*8no?~Ktno?≠Ú$Y2no?∆πA†èmo?nïJvmo?Ú—¨ïzlo?);
-    }
-    frontandback
-    {
-        type            empty;
-    }
-}
-
-
-// ************************************************************************* //

@@ -21,7 +21,7 @@ solvers
         solver          PCG;
 	preconditioner 	DIC;
 	tolerance	1e-8;
-        relTol		0.01;
+        relTol		0.001;
 
 /*
         solver          GAMG;
@@ -39,7 +39,7 @@ solvers
 	minIter 	3;
     }
 
-    "(U|k|omega|epsilon|nuTilda)"
+    "(U|k|omega|epsilon|nuTilda|zeta|q)"
     {
 
         //solver          PBiCG;
@@ -62,7 +62,7 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 1;
+    nNonOrthogonalCorrectors 2;
     consistent yes;
 
     //pRefCell 0;

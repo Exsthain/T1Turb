@@ -38,25 +38,25 @@ boundaryField
     {
 //Disable completely the wall functions treatment
 //need to use fixedValue in the other wall functions variables
-        //type            fixedValue;
-        //value           uniform 1e-12;
+        type            fixedValue;
+        value           uniform 1e-12;
 
 	//Best for LRN (1)
-	//(1)
         //type 	   	nutLowReWallFunction;
         //value           uniform 1e-12;
 
 	//LRN-HRN (1)
-        type 	   	  nutUSpaldingWallFunction;
-        value           uniform 1e-12;
+        //type 	   	  nutUSpaldingWallFunction;
+        //value           uniform 1e-12;
+        ////value           $internalField;
 
 	//Best for HRN (1)
         //type 	   	  nutUWallFunction;
-        //value           uniform 1e-12;
+        //value              uniform 1e-12;
 
 	//Best for HRN (1)
         //type 	   	  nutkWallFunction;
-        //value           uniform 1e-12;
+        //value             uniform 1e-12;
 
 //(1) OK for LaunderSharmaKE
 
@@ -70,6 +70,10 @@ boundaryField
     back
     {
         type            wedge;
+    }
+    bottom
+    {
+        type            symmetry;
     }
 }
 

@@ -15,7 +15,9 @@ FoamFile
 
 dimensions      [0 0 -1 0 0 0 0];
 
-internalField   uniform 7.5;
+//omega = k**(1/2) / ((Cmu**(1/4) * L)? 
+
+internalField   uniform 23.7;
 
 boundaryField
 {
@@ -39,8 +41,9 @@ boundaryField
 
 	//LRN-HRN - To enable wall function - Requires less iter to get profile
         type            omegaWallFunction;
-        value           $internalField;
         value           uniform 10000;
+        //value           $internalField;
+
     }
 
     front
@@ -50,6 +53,10 @@ boundaryField
     back
     {
         type            wedge;
+    }
+    bottom
+    {
+        type            symmetry;
     }
 }
 

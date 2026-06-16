@@ -35,8 +35,10 @@ fields
     U
     p
     wallShearStress
+    yPlus
     //U.component(0) 
 );
+
 
 sets
 (

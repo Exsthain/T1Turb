@@ -25,7 +25,11 @@ interpolationScheme cellPoint;
 // Fields to sample.
 fields
 (
-   grad(U) U 
+   U
+   wallShearStress
+   yPlus
+   p
+
 );
 
 surfaces

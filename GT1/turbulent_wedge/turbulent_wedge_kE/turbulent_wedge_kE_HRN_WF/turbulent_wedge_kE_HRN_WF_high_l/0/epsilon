@@ -16,8 +16,8 @@ FoamFile
 dimensions      [0 2 -3 0 0 0 0];
 
 //internalField   uniform 1e-12;
-internalField   uniform 0.0001;
-//internalField   uniform 0.1;
+//internalField   uniform 0.0001;
+internalField   uniform 0.1;
 
 boundaryField
 {
@@ -34,7 +34,10 @@ boundaryField
 
     top
     {
-	//LRN-HRN
+        //type            zeroGradient;
+        //value           uniform 0.1;
+
+	//LRN-HRN *Should work with (1)  but it gives the wrong profile
         type            epsilonWallFunction;
         value           uniform 1e-12;
         ////value           $internalField;
@@ -43,20 +46,24 @@ boundaryField
 	//Best for (1)
         //type            fixedValue;
         //value           uniform 1e-12;
+        //value           uniform 0.1;
 
-//(1) OK for LaunderSharmaKE and LamBremhorstKE
+//(1) OK for LaunderSharmaKE 
+//LamBremhorstKE has problems with this BC
     }
 
     front
     {
         type            wedge;
     }
-
     back
     {
         type            wedge;
     }
-
+    bottom
+    {
+        type            symmetry;
+    }
 }
 
 // ************************************************************************* //

@@ -33,16 +33,16 @@ boundaryField
 
     top
     {
-        //type            fixedValue;
+        type            fixedValue;
+        value           uniform 1e-12;
         //value           $internalField;
-        //value           uniform 1e-12;
 
-	//To enable wall function - Best for LRN-HRN (1)
-        type	          kqRWallFunction;
-        value             uniform 1e-12;
+	//To enable wall function - Best for HRN 
+        //type	          kqRWallFunction;
+        //value             uniform 1e-12;
 	//value           $internalField;
 
-	//LRN-HRN
+	//LRN-HRN  *Does not give right profile with (1)
         //type	          kLowReWallFunction;
         //value            uniform 1e-12;
 
@@ -57,6 +57,10 @@ boundaryField
     back
     {
         type            wedge;
+    }
+    bottom
+    {
+        type            symmetry;
     }
 }
 

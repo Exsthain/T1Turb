@@ -39,8 +39,9 @@ boundaryField
 
 	//LRN-HRN - To enable wall function - Requires less iter to get profile
         type            omegaWallFunction;
-        value           $internalField;
         value           uniform 10000;
+        //value           $internalField;
+
     }
 
     front
@@ -50,6 +51,10 @@ boundaryField
     back
     {
         type            wedge;
+    }
+    bottom
+    {
+        type            symmetry;
     }
 }
 

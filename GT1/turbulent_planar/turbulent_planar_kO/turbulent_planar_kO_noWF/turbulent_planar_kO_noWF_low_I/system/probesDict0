@@ -16,12 +16,12 @@ FoamFile
 type probes;
 libs ("libsampling.so");
 
-// Fields to be probed. runTime modifiable!
 fields
 (
     p
     U
     wallShearStress
+    yPlus
 );
 
 // Locations to be probed. runTime modifiable!

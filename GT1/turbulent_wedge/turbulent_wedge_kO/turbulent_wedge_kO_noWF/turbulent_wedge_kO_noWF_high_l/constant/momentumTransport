@@ -18,43 +18,29 @@ simulationType RAS;
 
 RAS
 {
-    //RASModel        kEpsilon;
-    //RASModel        realizableKE;
-    //RASModel        RNGkEpsilon;
-    //RASModel        kOmega;
-    //RASModel        kOmegaSST;
-    RASModel        kOmega2006;
-    //RASModel        ShihQuadraticKE;	//LRN-KE Nonlinear
-    //RASModel        SpalartAllmaras;
+    //RASModel        kEpsilon;		//HRN
+    //RASModel        realizableKE;	//HRN
+    //RASModel        RNGkEpsilon;	//HRN
+    RASModel        kOmega;		//LRN/HRN
+    //RASModel        kOmegaSST;	//LRN/HRN
+    //RASModel        kOmega2006;		//LRN/HRN
+    //RASModel        ShihQuadraticKE;	//HRN-KE Nonlinear 
+    //RASModel        SpalartAllmaras;	//LRN/HRN
     //RASModel        LienLeschziner;	//LRN-KE
-    //RASModel        LaunderSharmaKE;	//Issues with BCs and model
-    //RASModel        LamBremhorstKE;	//Issues with BCs and model
+    //RASModel        qZeta; //LRN-KE
 
-/*
-LRR
-LamBremhorstKE
-LaunderSharmaKE
-LienCubicKE
-LienLeschziner
-RNGkEpsilon
-SSG
-ShihQuadraticKE
-SpalartAllmaras
-kEpsilon
-kOmega
-kOmega2006
-kOmegaSST
-kOmegaSSTLM
-kOmegaSSTSAS
-kkLOmega
-qZeta
-realizableKE
-v2f
-*/
+    //These two requires spcial attention for epsilon BC - Needs to be fixedValue 0 for best results
+    //RASModel        LaunderSharmaKE;	//LRN-KE
+    //RASModel        LamBremhorstKE;	//LRN-KE - Issues with BCs and model
+
+
 
     turbulence      on;
 
     printCoeffs     on;
+
+
+//Coefficients can be set as:
 
     //alphaK2         2;
 
