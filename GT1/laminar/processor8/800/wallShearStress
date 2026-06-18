@@ -1,0 +1,80 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "800";
+    object      wallShearStress;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    top
+    {
+        type            calculated;
+        value           nonuniform List<vector> 
+12
+(
+(-0.0799513363267 1.67412720832e-13 -4.16128743098e-16)
+(-0.0799513362971 1.2176238971e-13 -3.1223552661e-16)
+(-0.0799513362806 7.48526794967e-14 -8.26377830804e-16)
+(-0.0799513362681 6.6269991303e-14 -5.37867791841e-16)
+(-0.0799513362561 5.45285942955e-14 -3.85096638323e-16)
+(-0.0799513362477 4.17941147545e-14 -2.99563419155e-16)
+(-0.0799513362406 3.30681842133e-14 -6.99333463399e-16)
+(-0.0799513362351 2.45335474147e-14 -5.29608614306e-16)
+(-0.0799513362307 2.08785853981e-14 -5.60474198336e-16)
+(-0.0799513362273 1.56119130289e-14 -5.69518408925e-16)
+(-0.0799513362245 1.25549391176e-14 -5.48943430386e-16)
+(-0.0799513362226 1.36106059349e-14 -5.22372076173e-16)
+)
+;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<vector> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<vector> 0();
+    }
+    front
+    {
+        type            wedge;
+    }
+    back
+    {
+        type            wedge;
+    }
+    procBoundary8to9
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary8to10
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary8to15
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

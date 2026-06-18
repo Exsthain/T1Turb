@@ -1,0 +1,30 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField::Internal;
+    location    "500";
+    object      tmp<kOmega:G>;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+value           nonuniform List<scalar> 
+188
+(c°Œş«Ou?@<¢Ou?3Öcó›Ou?ÜÅ+ª”Ou?˜,/…Ou?'ÄO‰Ou?ÈÌjƒOu?mvK!Ou?mZ±TzOu?–$øvOu?çÄLŠsOu?ääŒ²pOu??> 5v?8»B$–5v?]gù×5v?½ê0jˆ5v?¿bæ7‚5v?ğã¢|5v?g¤õv5v?ºYr5v?ª–=¿m5v?6•ªWj5v?æ–àf5v?ØĞîc5v?<%èZ­ôv?îÕI£ôv?Iõôv?´ù¾“•ôv?ÓbMhôv?Ä©Ï‰ôv?6½ø#„ôv?’pËôv?È<ìzôv?2Ë„wôv?m.tôv?çö&qôv?·¤@­‹w?eè;£‹w?z¿K$‹w?Å¹•‹w?_ò©‹w?$–!Š‹w?ßdŠ„‹w?šõú?€‹w?‚ô%q{‹w?Oó›x‹w?±´ñ²t‹w?$ı¨Éq‹w?–Gt“¸ùw?9¯1Ã®ùw?şáQä¨ùw? W¹£¡ùw?¬,Ä›ùw?Iº_–ùw?ğ“¡ñùw?ãÖ$ÅŒùw?%y|ˆùw?°6Ô„ùw?°Ùìùw?H
+²~ùw?=K„' >x?’¦ª²>x?V–R >x?r"Í%
+>x?ZY&Œ>x?|!`ÿ=x?—Œ„.ú=x?úª·/ö=x?5Å›´ñ=x?é‘®•î=x?Ö¹í}ë=x?=´_µè=x?êˆiXx?öF`Xx?¾f•êZXx?	lñRTXx?]Ä…OXx?¶èF5JXx?™JèSEXx?‰Æº’AXx?
+[=Xx?M«m:Xx?&ïL7Xx?ºgæ4Xx?ÖÒú®KHx?ä>qkCHx?Ám–ª>Hx?åwş’8Hx?XzáÁ3Hx?‚F/Hx?nÉÍÈ*Hx?ú-U'Hx?â
+s#Hx?Ò¦¿Â Hx?Ş'œ-Hx?”™ğ«Hx?Eí+0Hx?çrHµx?ô¹I!®x?‚ÜMã©x?ñ‹âh¤x?º)J x?w¹œx?:ât˜x?ûøø”x?à¡Ö{‘x?knQx?zİ«ÕŒx?|u†Šx?6È1Ê…x?QyãÍ¨w?0Ç¨w?EE„Ã¨w?œ)Ä¾¨w?½‹ñ»¨w?<û§·¨w?eÇ´¨w?†{Şg±¨w?„Pa®¨w?ø™P¬¨w?¹êÕrª¨w?‹Ü™_¨¨w?ñÙı¦¨w?vDI	ûw?©‡Âõw?óÅş¶òw?ç[şËîw?¤CŞ³ëw?Õ”Üèw?8öåw?
+à¹Çãw?lcºEáw?§N–ßw?™&Ö&Şw?X—WÜw?ãÉİhÚw?tù|îav?îz}„êav?ÖJñ#èav?ö'åav?5 RÂâav?rK¬àav?‚H¿^Şav?ß€D¹Üav?ø	IÉÚav?2â†Ùav?ãN¥”Øav?`°s×av?(LÍiÕav?}¯ü­u?—ux«u?EÊ©u?H@%Ô§u?®e(-¦u?´TÌ¤u?êõZA£u?ÑÄa1¢u?OĞß u?ÚçŞ u?ÁD¯Ÿu?ì5nu?ˆÇ…
+u?:şËğzt?yĞÕïzt?åL	áîzt? ‹îzt?s(å&ízt?Q‹‚˜ìzt?kÖ Êëzt?)çYëzt?×ê¨­êzt?f2]êzt?A"í‚êzt?İ°ézt?z¶Öšèzt?ÄĞÖ$A_50ŠÖ$A.,$Ö$A¬qZÖ$Aı·Ö$Aó·?Ö$AçâÖ$Aûİg+Ö$A;çRÖ$AM/Ö$AJS¥úÕ$AºsùÕ$A0äíöÔ$A);
+
+
+// ************************************************************************* //

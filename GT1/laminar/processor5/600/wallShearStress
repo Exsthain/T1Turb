@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "600";
+    object      wallShearStress;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    top
+    {
+        type            calculated;
+        value           nonuniform List<vector> 
+13
+(
+(-0.0799925881381 5.76029091043e-08 4.03539171814e-13)
+(-0.0799832085643 4.44874992568e-08 3.42586037533e-13)
+(-0.0799759577635 3.43698724896e-08 2.90558084268e-13)
+(-0.0799703591845 2.65494186505e-08 2.46309952839e-13)
+(-0.0799660327135 2.05115716092e-08 2.08718261792e-13)
+(-0.0799626909762 1.58459409094e-08 1.7669048659e-13)
+(-0.0799601088777 1.22424175288e-08 1.49362048704e-13)
+(-0.0799581141835 9.45820058616e-09 1.26102015091e-13)
+(-0.0799565729871 7.30745249557e-09 1.06319825716e-13)
+(-0.0799553823093 5.64579527749e-09 8.96687725335e-14)
+(-0.0799544623493 4.36205590323e-09 7.55272339839e-14)
+(-0.0799537515863 3.37021797228e-09 6.34129166995e-14)
+(-0.0799532024377 2.60389476883e-09 5.33210579496e-14)
+)
+;
+    }
+    inlet
+    {
+        type            calculated;
+        value           nonuniform List<vector> 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<vector> 0();
+    }
+    front
+    {
+        type            wedge;
+    }
+    back
+    {
+        type            wedge;
+    }
+    procBoundary5to3
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary5to4
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary5to7
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

@@ -14,6 +14,6 @@ sh run_turbulent_planar.sh
 cd ..
 
 cd turbulent_wedge
-sh run_timer.sh
+sh run_turbulent_wedge.sh
 cd ..
 

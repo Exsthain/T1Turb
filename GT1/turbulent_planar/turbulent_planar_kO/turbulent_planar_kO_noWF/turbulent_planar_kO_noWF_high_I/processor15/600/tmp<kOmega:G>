@@ -1,0 +1,25 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField::Internal;
+    location    "600";
+    object      tmp<kOmega:G>;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+value           nonuniform List<scalar> 
+188
+(ô}ï”jm?ÚÒ…jm?c¢ëµŒjm?W$“jm?“—ì…jm?´¥W~jm?¿˜*€jm?x†{jm?<ıps|jm?ú&ükyjm?Nl†Bzjm?ÿ‹`„wjm?¿„šõÓn?Y¶ƒäÓn?Pc¨ìÓn?ËÒºáÓn?æ	?¸åÓn?-`…×İÓn?À	GMàÓn?3OÛÓn?ŠJÜÓn?±MûèØÓn?¡°ÓÙÓn?†¹³ÖÓn?¾—ÁGp?GÖ$Ñıp?Œ0p?"¦!üp?È‘şp?o‰úp?o ×ûp?VdÙ(ùp?e«³ùp?æóøp?¥ü˜øp?ÔqĞâöp?D†kĞĞp?|÷CÈp?óôD Ìp?f›¬ Æp?X^$Ép?5•|Åp?øyoÆp?áS»Ãp?róOÄp?Á)±Âp?”H<Ãp?ª“ù~Áp?-Üaßıp?‘´´àÖıp?à†ÂHÛıp?Î”¹PÕıp?·Üİ×ıp?æ§?ÔÓıp?†{'8Õıp?“îˆÒıp?jBÒ$Óıp?zà—‰Ñıp?íuÒıp?KŒ`Ğıp?W¦YÒTq?©]˜ÄÉTq?°xS#ÎTq?V\.LÈTq?HòËÖÊTq?y!¯åÆTq?6jÅJÈTq?(¬ÅTq?8LÆTq?A³»ÄTq?á|Ÿ[ÅTq?†Hì ÃTq?ó“³^“q?	_¼V“q?:üZ“q?Â`U“q?¦;§ÛW“q?Ô0>T“q?ã›tU“q?,)òR“q?~9¢’S“q?3ºıR“q?'¸ö½R“q?6}Q“q?Kdt;M¹q?Ö•ÅE¹q?ÇyÏI¹q?Eğ8‹D¹q?QíèF¹q?=Ÿ7`C¹q?’æ°D¹q?ÁÌXB¹q?¹ˆ‚õB¹q?ö¹’A¹q?ƒîCB¹q? 0¥@¹q?môO‰=¹q?õ£ˆÖuÆq?„eoÆq?'_ïÆrÆq?€‰É÷mÆq?İt)pÆq?ÁjòlÆq?~`,nÆq?Íñp
+lÆq?¦š³ŸlÆq?>‹3`kÆq?»f&lÆq?%C‘jÆq?1ù¢fÆq?XÈ:Àºq?c§ŸEººq?ŞÅé˜½ºq?·,\¹ºq?ñºzR»ºq?ñv€¸ºq?¡õš¹ºq?Zc½·ºq?P`sF¸ºq?%²Ç2·ºq?_/í·ºq?`N†¶ºq?l%ã°ºq?Ñ†6H$–q?fØ1U–q?Ú¤'"–q?d¡kš–q?£bòE –q?Ñ’í–q?‹bß–q?ÉRªS–q?V®™Ë–q?.x…ì–q?x½x©–q?Ñ²d–q?ÒDğ¦–q?Ô¦Yë«Xq?m'¨Xq?N=’]ªXq?Ü¿§Xq?÷†Ùî¨Xq?øEu$§Xq?-õHä§Xq?Öàá·¦Xq?ÚA4§Xq?¢$y¦Xq?‹ãF;§Xq?$r¦Xq?G4¶=¢Xq?á9T,vq?I‡	Åsq?"©äEuq?.“Nosq?„¾Utq?Şˆ†-sq?°«²sq?xÄZòrq?l–:sq?<Kárq?évâ¯sq?št¦rq?v£Ñ£oq?6Ê¨Ö“p?˜ª}&Õ“p?„š{ÖÕ“p?Æ&Õ“p?\İVqÕ“p?ğªÑüÔ“p?Ùƒ;Õ“p?Ñ38õÔ“p?*³HÕ“p?ığÂÕ“p?yÕÙÕ“p?Ã5FÕ“p?7	Ó“p?şöTÛM(A¢ÛM(A¤âòÚM(AÕXÛM(A‰ÿ‰§ÚM(ANÆ¹ÚM(A´ó½iÚM(AXrÚM(A:I‚4ÚM(A_<ƒ2ÚM(AhCóÙM(AÀ™œ¾ÙM(Aÿ¿ÏKØM(A);
+
+
+// ************************************************************************* //

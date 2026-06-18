@@ -1,0 +1,79 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "400";
+    object      wallShearStress;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    top
+    {
+        type            calculated;
+        value           nonuniform List<vector> 
+11
+(
+(-0.201066519429 0.0484002967009 3.26522912292e-12)
+(-0.128375440357 0.000358147400483 4.7230790403e-12)
+(-0.0848860580616 6.84773128195e-05 5.21753108813e-12)
+(-0.0957543521589 7.64706520668e-06 5.24118596513e-12)
+(-0.0853722918712 1.84770321712e-05 5.19959498219e-12)
+(-0.0871651569094 6.26164744747e-06 5.00656028663e-12)
+(-0.0838535704716 8.14767849544e-06 4.73842208595e-12)
+(-0.0837061500099 4.34394821106e-06 4.39306159823e-12)
+(-0.0824330836542 4.14862230349e-06 4.01367038914e-12)
+(-0.0820517605785 2.72160359756e-06 3.6145961212e-12)
+(-0.081466692757 2.29597595481e-06 3.2243823074e-12)
+)
+;
+    }
+    inlet
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform List<vector> 0();
+    }
+    front
+    {
+        type            wedge;
+    }
+    back
+    {
+        type            wedge;
+    }
+    procBoundary2to0
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary2to1
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary2to3
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //
